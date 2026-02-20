@@ -1,0 +1,55 @@
+window#waybar {
+    background: transparent;
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+}
+
+/* Base des îlots */
+#custom-rofi,
+#custom-launcher,
+#mpris,
+#tray,
+#custom-notification,
+#bluetooth,
+#network,
+#pulseaudio,
+#battery,
+#clock,
+#custom-power {
+    background-color: #1e1e2e;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 12px 0;
+    margin-bottom: 2px;
+    color: #cdd6f4;
+}
+
+/* Couleurs spécifiques */
+#custom-rofi { color: #cba6f7; font-size: 20px; }
+#custom-launcher { color: #89b4fa; font-size: 20px; }
+
+#mpris {
+    background-color: #f5c2e7;
+    color: #1e1e2e;
+    border-radius: 50%;
+    margin: 10px 5px;
+}
+
+#tray { background-color: rgba(49, 50, 68, 0.5); padding: 15px 0; }
+#custom-notification { color: #f38ba8; }
+#bluetooth { color: #89b4fa; }
+#network { color: #f9e2af; }
+#pulseaudio { color: #fab387; }
+#battery { color: #a6e3a1; }
+#clock { color: #cba6f7; font-weight: bold; }
+
+/* Bouton Alimentation */
+#custom-power {
+    color: #f38ba8; /* Rouge */
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+/* Slider Audio */
+#pulseaudio-slider { min-height: 80px; margin-top: 5px; }
+#pulseaudio-slider trough { min-width: 8px; border-radius: 5px; background-color: #313244; }
+#pulseaudio-slider highlight { border-radius: 5px; background-color: #fab387; }

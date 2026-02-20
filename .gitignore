@@ -1,0 +1,8 @@
+**/cache/
+**/Socket
+**/*.log
+
+google-chrome/
+discord/
+Slack/
+Bitwarden/
