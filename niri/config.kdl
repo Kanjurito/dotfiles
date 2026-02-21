@@ -4,7 +4,8 @@ spawn-at-startup "awww-daemon"
 spawn-at-startup "waybar"
 spawn-at-startup "sh" "-c" "vicinae server &"
 spawn-at-startup "swww-daemon"
-spawn-at-startup "~/.config/niri/scripts/wallpaper_carousel.sh"
+spawn-at-startup "~/.config/niri/script/wallpaper_carousel.sh"
+spawn-sh-at-startup "eww daemon && eww open music-widget"
 // General Settings
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png"
@@ -74,7 +75,7 @@ binds {
     MOD+E { spawn "nautilus"; }
 
     // Fond d'écran (Carrousel)
-    MOD+W { spawn "/home/alterra/.config/niri/scripts/wallpaper_carousel.sh"; }
+    MOD+W { spawn "/home/alterra/.config/niri/script/wallpaper_carousel.sh"; }
 
     // Media Keys
     XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "mediactl volume_up"; }
