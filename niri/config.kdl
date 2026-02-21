@@ -69,9 +69,9 @@ binds {
 
     // Applications
     MOD+RETURN { spawn "konsole"; }
-    MOD+A { spawn "vicinae" "toggle"; }
+    MOD+A { spawn "rofi" "-show" "drun"; }
     MOD+B { spawn "firefox"; }
-    MOD+E { spawn "thunar"; }
+    MOD+E { spawn "nautilus"; }
 
     // Fond d'écran (Carrousel)
     MOD+W { spawn "/home/alterra/.config/niri/scripts/wallpaper_carousel.sh"; }
@@ -96,17 +96,16 @@ binds {
     MOD+K                               { focus-workspace-up; }
     MOD+L                               { focus-column-right; }
 
-    MOD+LEFT                            { focus-column-left; }
-    MOD+DOWN                            { focus-window-down; }
-    MOD+UP                              { focus-window-up; }
-    MOD+RIGHT                           { focus-column-right; }
+    MOD+CTRL+LEFT                            { focus-column-left; }
+    MOD+CTRL+DOWN                            { focus-window-down; }
+    MOD+CTRL+UP                              { focus-window-up; }
+    MOD+CTRL+RIGHT                           { focus-column-right; }
 
     // Move windows within workspace
-    MOD+SHIFT+LEFT                      { move-column-left; }
-    MOD+SHIFT+DOWN                      { move-window-down; }
-    MOD+SHIFT+UP                        { move-window-up; }
-    MOD+SHIFT+RIGHT                     { move-column-right; }
-
+    MOD+LEFT  { move-column-left; }
+    MOD+DOWN  { move-window-down; }
+    MOD+UP    { move-window-up; }
+    MOD+RIGHT { move-column-right; }
     MOD+SHIFT+H                         { move-column-left; }
     MOD+SHIFT+J                         { move-column-to-workspace-down; }
     MOD+SHIFT+K                         { move-column-to-workspace-up; }
@@ -120,10 +119,10 @@ binds {
     MOD+END                             { focus-column-last; }
 
     // Monitor Management - Move between monitors
-    MOD+CTRL+LEFT                       { focus-monitor-left; }
-    MOD+CTRL+RIGHT                      { focus-monitor-right; }
-    MOD+CTRL+UP                         { focus-monitor-up; }
-    MOD+CTRL+DOWN                       { focus-monitor-down; }
+    MOD+SHIFT+CTRL+LEFT                       { focus-monitor-left; }
+    MOD+SHIFT+CTRL+RIGHT                      { focus-monitor-right; }
+    MOD+SHIFT+CTRL+UP                         { focus-monitor-up; }
+    MOD+SHIFT+CTRL+DOWN                       { focus-monitor-down; }
 
     MOD+CTRL+H                          { focus-monitor-left; }
     MOD+CTRL+L                          { focus-monitor-right; }
@@ -131,10 +130,10 @@ binds {
     MOD+CTRL+J                          { focus-monitor-down; }
 
     // Move windows to different monitors
-    MOD+SHIFT+CTRL+LEFT                 { move-column-to-monitor-left; }
-    MOD+SHIFT+CTRL+RIGHT                { move-column-to-monitor-right; }
-    MOD+SHIFT+CTRL+UP                   { move-column-to-monitor-up; }
-    MOD+SHIFT+CTRL+DOWN                 { move-column-to-monitor-down; }
+    MOD+SHIFT+LEFT                 { move-column-to-monitor-left; }
+    MOD+SHIFT+RIGHT                { move-column-to-monitor-right; }
+    MOD+SHIFT+UP                   { move-column-to-monitor-up; }
+    MOD+SHIFT+DOWN                 { move-column-to-monitor-down; }
 
     MOD+SHIFT+CTRL+H                    { move-column-to-monitor-left; }
     MOD+SHIFT+CTRL+L                    { move-column-to-monitor-right; }
