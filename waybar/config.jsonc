@@ -1,107 +1,101 @@
 {
-    "layer": "top",
-    "position": "left",
-    "width": 54,
-    "margin": 10,
-    "spacing": 10,
+  "layer": "top",
+  "position": "left",
+  "width": 54,
+  "margin": 10,
+  "spacing": 10,
 
-    "modules-left": [
-        "custom/rofi",
-        "custom/launcher"
-    ],
-    "modules-center": [
-        "mpris",
-        "tray"
-    ],
-    "modules-right": [
-        "custom/notification",
-        "group/audio",
-        "bluetooth",
-        "network",
-        "battery",
-        "clock",
-        "custom/power" // Nouveau bouton d'alimentation
-    ],
+  "modules-left": ["custom/rofi", "custom/launcher"],
+  "modules-center": ["mpris", "tray", "custom/media"],
+  "modules-right": ["custom/notification", "group/audio", "bluetooth", "network", "battery", "clock", "custom/user", "custom/power"],
 
-    // --- MODULES ---
+  "custom/rofi": {
+    "format": "󰍉",
+    "on-click": "rofi -show drun",
+    "tooltip": false,
+  },
 
-    "custom/rofi": {
-        "format": "󰍉",
-        "on-click": "rofi -show drun",
-        "tooltip": false
-    },
-
-    "custom/launcher": {
-        "format": "",
-        "on-click": "alacritty", 
-        "tooltip": false
-    },
-
-"mpris": {
+  "custom/launcher": {
+    "format": "",
+    "on-click": "alacritty",
+    "tooltip": false,
+  },
+  "custom/media": {
+    "format": "󰎆",
+    "on-click": "bash ~/.config/quickshell/media-player/toggle.sh",
+    "tooltip": false,
+  },
+  "mpris": {
     "format": "{player_icon}",
     "player-icons": {
-        "default": "󰎆",
-        "spotify": "",
-        "firefox": "󰈹"
+      "default": "󰎆",
+      "spotify": "",
+      "firefox": "󰈹",
     },
     "on-click": "playerctl play-pause",
-    "tooltip": true
-},
-    "tray": {
-        "icon-size": 18,
-        "spacing": 10
+    "tooltip": true,
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10,
+  },
+
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂚",
+      "dnd-notification": "󱅫",
+      "dnd-none": "󰂛",
     },
+    "return-type": "json",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "escape": true,
+  },
 
-    "custom/notification": {
-        "tooltip": false,
-        "format": "{icon}",
-        "format-icons": {
-            "notification": "󱅫",
-            "none": "󰂚",
-            "dnd-notification": "󱅫",
-            "dnd-none": "󰂛"
-        },
-        "return-type": "json",
-        "exec": "swaync-client -swb",
-        "on-click": "swaync-client -t -sw",
-        "escape": true
-    },
+  "group/audio": {
+    "orientation": "vertical",
+    "drawer": { "transition-duration": 500, "transition-left-to-right": false },
+    "modules": ["pulseaudio", "pulseaudio/slider"],
+  },
 
-    "group/audio": {
-        "orientation": "vertical",
-        "drawer": { "transition-duration": 500, "transition-left-to-right": false },
-        "modules": ["pulseaudio", "pulseaudio/slider"]
-    },
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-muted": "󰝟",
+    "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
+    "on-click": "pavucontrol",
+  },
 
-    "pulseaudio": {
-        "format": "{icon}",
-        "format-muted": "󰝟",
-        "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
-        "on-click": "pavucontrol"
-    },
+  "pulseaudio/slider": { "min": 0, "max": 100, "orientation": "vertical" },
 
-    "pulseaudio/slider": { "min": 0, "max": 100, "orientation": "vertical" },
+  "bluetooth": {
+    "format": "󰂯",
+    "on-click": "blueman-manager",
+  },
 
-    "bluetooth": {
-        "format": "󰂯",
-        "on-click": "blueman-manager"
-    },
+  "network": {
+    "format-wifi": "",
+    "on-click": "alacritty -e nmtui",
+  },
 
-    "network": {
-        "format-wifi": "",
-        "on-click": "alacritty -e nmtui"
-    },
+  "battery": {
+    "format": "{icon}",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+  },
 
-    "battery": {
-        "format": "{icon}",
-        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
-    },
+  "clock": { "format": "{:%H\n%M}" },
 
-    "clock": { "format": "{:%H\n%M}" },
+  "custom/user": {
+    "format": "󰀄",
+    "on-click": "bash ~/.config/quickshell/user-menu/toggle.sh",
+    "tooltip": false,
+  },
 
-    "custom/power": {
-        "format": "",
-        "on-click": "wlogout", // Ou "rofi -show power-menu" si tu as un script
-        "tooltip": false
-    }
+  "custom/power": {
+    "format": "",
+    "on-click": "eww -c ~/.config/eww/powermenu/ open --toggle powermenu",
+    "tooltip": false,
+  },
 }

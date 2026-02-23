@@ -1,0 +1,4 @@
+module MediaPlayer
+NeonButton 1.0 NeonButton.qml
+Equalizer 1.0 Equalizer.qml
+MediaPlayerWindow 1.0 MediaPlayerWindow.qml

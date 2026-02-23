@@ -5,32 +5,34 @@ spawn-at-startup "waybar"
 spawn-at-startup "sh" "-c" "vicinae server &"
 spawn-at-startup "swww-daemon"
 spawn-at-startup "~/.config/niri/script/wallpaper_carousel.sh"
-spawn-sh-at-startup "eww daemon && eww open music-widget"
+spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/media-player"
+spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/user-menu"
+spawn-at-startup "xwayland-satellite" // Si tu utilises xwayland-satellite (recommandé pour Niri)
+spawn-at-startup "Xwayland" ":1"
 // General Settings
-prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png"
 
-// 1. Dell à gauche (Vertical)
+// Dell screen
 output "DP-1" {
     mode "1920x1200@59.950"
     transform "90" // Rotation pour la verticale
     position x=-1200 y=0 // Placé à gauche du centre
 }
 
-// 2. Lenovo au centre (Principal - 144Hz)
+// Lenovo screen
 output "DP-2" {
     mode "1920x1080@143.847"
     position x=0 y=0
     background-color "#1e1e2e"
 }
 
-// 3. Philips à droite
+// Philips screen
 output "HDMI-A-1" {
     mode "1440x900@59.887"
     position x=1920 y=0 // Placé après le Lenovo
 }
 
-// 4. La TV (Désactivée pour ne pas consommer de ressources)
+// TV (Disable)
 output "HDMI-A-2" {
     off
 }
@@ -61,15 +63,21 @@ layer-rule {
     match namespace="^awww-daemon$"
     place-within-backdrop true
 }
-
+window-rule {
+    match title="eww-powermenu"
+    draw-border-with-background false
+    geometry-corner-radius 0
+    // On force Niri à ne pas mettre d'ombre sur la fenêtre parente (le plein écran)
+    default-column-width { proportion 1.0; } 
+}
 binds {
     // Session
     MOD+SHIFT+E { quit; }
-    // MOD+SHIFT+R { reload-config; }  // niri recharge la config automatiquement à la sauvegarde
+    Mod+Shift+Y { spawn "eww" "-c" "/home/alterra/.config/eww/powermenu/" "open" "--toggle" "powermenu"; }
     MOD+SHIFT+ESCAPE { show-hotkey-overlay; }
 
+
     // Applications
-    MOD+RETURN { spawn "konsole"; }
     MOD+A { spawn "rofi" "-show" "drun"; }
     MOD+B { spawn "firefox"; }
     MOD+E { spawn "nautilus"; }
@@ -208,8 +216,16 @@ binds {
     MOD+ALT+W                           { spawn "sh" "-c" "pgrep -x waybar >/dev/null && killall waybar || waybar &"; }
     // use with toggle in waybar (doens't restart if not running)
     // MOD+ALT+W                           { spawn "killall" "-SIGUSR1" "waybar"; }
-}
-
+	MOD+SHIFT+F { fullscreen-window; }
+	MOD+MINUS { set-column-width "-10%"; }
+    	MOD+EQUAL { set-column-width "+10%"; }
+	MOD+SHIFT+MINUS { set-window-height "-10%"; }
+    	MOD+SHIFT+EQUAL { set-window-height "+10%"; }
+	CTRL+ALT+DELETE { spawn "shutdown" "now"; }
+	MOD+SHIFT+R { spawn "bash" "-c" "pkill -f 'qs -p' ; sleep 0.5 && qs -p ~/.config/quickshell/media-player & qs -p ~/.config/quickshell/user-menu &"; }
+    MOD+SHIFT+M { spawn "bash" "-c" "~/.config/quickshell/media-player/toggle.sh"; }
+    MOD+SHIFT+U { spawn "bash" "-c" "~/.config/quickshell/user-menu/toggle.sh"; }
+	}
 // Layout Settings
 layout {
     gaps 0
@@ -222,11 +238,11 @@ layout {
         proportion 0.66667
     }
 
-    focus-ring {
-        width 0
-        active-color "#1E1E2E"
+focus-ring {
+        width 2
+        active-color "#242424"
+        inactive-color "#FFFFFF00"
     }
-
     insert-hint {
         off
         color "#1E1E2E"
@@ -394,7 +410,7 @@ environment {
     DISPLAY null
     ELECTRON_OZONE_PLATFORM_HINT "auto"
     XDG_SESSION_TYPE "wayland"
-    XDG_CURRENT_DESKTOP "niri"
+    XDG_CURRENT_DESKTOP "GNOME"
 
     // Wayland Platform Settings
     QT_QPA_PLATFORM "wayland"

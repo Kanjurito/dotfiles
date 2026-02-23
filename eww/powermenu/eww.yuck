@@ -1,0 +1,28 @@
+(defwidget powermenu_layout []
+  ;; L'eventbox principale qui prend tout l'écran
+  (eventbox :onclick "eww -c ~/.config/eww/powermenu/ close powermenu"
+            :onkeypress "if [ {} -eq 9 ]; then eww -c ~/.config/eww/powermenu/ close powermenu; fi"
+    (box :class "powermenu-overlay"
+      ;; La boîte du menu réel, on utilise :halign et :valign pour la centrer
+      (box :class "powermenu-bg" 
+           :orientation "h" 
+           :space-evenly true 
+           :spacing 20
+           :halign "center"
+           :valign "center"
+           :width 500
+           :height 150
+        (button :class "btn-power"  :onclick "systemctl poweroff" "󰐥")
+        (button :class "btn-reboot" :onclick "systemctl reboot"   "󰜉")
+        (button :class "btn-logout" :onclick "loginctl terminate-user $USER" "󰍃")
+        (button :class "btn-niri"   :onclick "niri msg action quit" "󰈆")))))
+
+(defwindow powermenu
+  :monitor 1
+  :stacking "fg"
+  :windowtype "normal"
+  :wm-ignore false
+  :focusable true
+  ;; On met la fenêtre en plein écran pour que l'eventbox capte les clics partout
+  :geometry (geometry :x "0%" :y "0%" :width "100%" :height "100%" :anchor "center")
+  (powermenu_layout))

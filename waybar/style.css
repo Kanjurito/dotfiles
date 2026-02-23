@@ -3,9 +3,9 @@ window#waybar {
     font-family: "JetBrainsMono Nerd Font", sans-serif;
 }
 
-/* Base des îlots */
 #custom-rofi,
 #custom-launcher,
+#custom-media,
 #mpris,
 #tray,
 #custom-notification,
@@ -23,9 +23,18 @@ window#waybar {
     color: #cdd6f4;
 }
 
-/* Couleurs spécifiques */
-#custom-rofi { color: #cba6f7; font-size: 20px; }
-#custom-launcher { color: #89b4fa; font-size: 20px; }
+#custom-rofi {
+    color: #cba6f7;
+    font-size: 20px;
+}
+#custom-launcher {
+    color: #89b4fa;
+    font-size: 20px;
+}
+#custom-media {
+    color: #cba6f7;
+    font-size: 20px;
+}
 
 #mpris {
     background-color: #f5c2e7;
@@ -34,22 +43,50 @@ window#waybar {
     margin: 10px 5px;
 }
 
-#tray { background-color: rgba(49, 50, 68, 0.5); padding: 15px 0; }
-#custom-notification { color: #f38ba8; }
-#bluetooth { color: #89b4fa; }
-#network { color: #f9e2af; }
-#pulseaudio { color: #fab387; }
-#battery { color: #a6e3a1; }
-#clock { color: #cba6f7; font-weight: bold; }
+#tray {
+    background-color: rgba(49, 50, 68, 0.5);
+    padding: 15px 0;
+}
+#custom-notification {
+    color: #f38ba8;
+}
+#bluetooth {
+    color: #89b4fa;
+}
+#network {
+    color: #f9e2af;
+}
+#pulseaudio {
+    color: #fab387;
+}
+#battery {
+    color: #a6e3a1;
+}
+#clock {
+    color: #cba6f7;
+    font-weight: bold;
+}
 
-/* Bouton Alimentation */
+#custom-user {
+    color: #cba6f7;
+    font-size: 20px;
+}
+
 #custom-power {
-    color: #f38ba8; /* Rouge */
+    color: #f38ba8;
     font-size: 20px;
     margin-top: 5px;
 }
-
-/* Slider Audio */
-#pulseaudio-slider { min-height: 80px; margin-top: 5px; }
-#pulseaudio-slider trough { min-width: 8px; border-radius: 5px; background-color: #313244; }
-#pulseaudio-slider highlight { border-radius: 5px; background-color: #fab387; }
+#pulseaudio-slider {
+    min-height: 80px;
+    margin-top: 5px;
+}
+#pulseaudio-slider trough {
+    min-width: 8px;
+    border-radius: 5px;
+    background-color: #313244;
+}
+#pulseaudio-slider highlight {
+    border-radius: 5px;
+    background-color: #fab387;
+}
