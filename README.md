@@ -75,6 +75,120 @@ Example:
 
 WALLPAPER_DIR="$HOME/Pictures/Wallpapers"
 ```
+---
+
+## ⌨️ Keybindings
+
+A complete overview of all custom keybindings used in this Niri setup.
+
+### 🖥️ Session & System
+| Keybind | Action |
+|--------|--------|
+| **MOD + Shift + E** | Quit session |
+| **MOD + Shift + Y** | Toggle powermenu |
+| **MOD + Shift + Escape** | Show hotkey overlay |
+| **CTRL + ALT + Delete** | Shutdown |
+
+---
+
+### 🚀 Applications & Scripts
+| Keybind | Action |
+|--------|--------|
+| **MOD + A** | Launch Rofi (drun) |
+| **MOD + B** | Launch Firefox |
+| **MOD + E** | Launch Nautilus |
+| **MOD + Shift + D** | Launch Discord (XWayland) |
+| **MOD + W** | Change wallpaper |
+| **MOD + Shift + W** | Launch Quickshell waifu widget |
+| **MOD + Shift + R** | Restart Quickshell widgets |
+| **MOD + Shift + M** | Toggle media-player widget |
+| **MOD + Shift + U** | Toggle user-menu widget |
+| **MOD + P** | Launch Hyprpicker |
+
+---
+
+### 🔊 Media & Brightness
+| Keybind | Action |
+|--------|--------|
+| **XF86AudioRaiseVolume** | Volume up |
+| **XF86AudioLowerVolume** | Volume down |
+| **XF86AudioMute** | Mute audio |
+| **XF86AudioMicMute** | Mute microphone |
+| **XF86AudioNext** | Next track |
+| **XF86AudioPrev** | Previous track |
+| **XF86AudioPause / Play** | Play / Pause |
+| **XF86MonBrightnessUp** | Increase brightness |
+| **XF86MonBrightnessDown** | Decrease brightness |
+
+---
+
+### 🪟 Window Management
+| Keybind | Action |
+|--------|--------|
+| **MOD + Q** | Close window |
+| **MOD + H / L** | Focus column left / right |
+| **MOD + J / K** | Focus workspace down / up |
+| **MOD + CTRL + Arrows** | Focus windows/columns |
+| **MOD + Arrows** | Move windows/columns |
+| **MOD + Shift + H/J/K/L** | Move columns or send to workspace |
+| **MOD + Shift + Home/End** | Move column to first/last |
+| **MOD + Home/End** | Focus first/last column |
+
+---
+
+### 🖥️ Multi‑Monitor Controls
+| Keybind | Action |
+|--------|--------|
+| **MOD + CTRL + H/J/K/L** | Focus monitor |
+| **MOD + Shift + CTRL + H/J/K/L** | Move window to monitor |
+| **MOD + Shift + Arrows** | Move column to monitor |
+
+---
+
+### 🗂️ Workspace Navigation
+| Keybind | Action |
+|--------|--------|
+| **MOD + 1–9** | Switch workspace |
+| **MOD + Shift + 1–9** | Move window to workspace |
+| **MOD + Tab** | Previous workspace |
+| **MOD + Escape** | Toggle overview |
+| **MOD + Wheel Up/Down** | Switch workspace |
+| **MOD + Shift + Wheel Up/Down** | Move window to workspace |
+
+---
+
+### 🧱 Layout & Resizing
+| Keybind | Action |
+|--------|--------|
+| **MOD + C** | Center column |
+| **MOD + CTRL + C** | Center visible columns |
+| **MOD + [ / ]** | Resize column width |
+| **MOD + ALT + Wheel Up/Down** | Resize window width |
+| **MOD + CTRL + Wheel Up/Down** | Resize window height |
+| **MOD + Minus / Equal** | Resize column width |
+| **MOD + Shift + Minus / Equal** | Resize window height |
+
+---
+
+### 🪟 Window Modes
+| Keybind | Action |
+|--------|--------|
+| **MOD + T** | Toggle floating |
+| **MOD + F** | Fullscreen window |
+| **MOD + Shift + F** | Fullscreen window (alt bind) |
+| **MOD + M** | Maximize column |
+
+---
+
+### 📸 Screenshots
+| Keybind | Action |
+|--------|--------|
+| **MOD + S** | Screenshot |
+| **MOD + Shift + S** | Screenshot screen → save to disk |
+| **MOD + CTRL + S** | Screenshot window → save to disk |
+
+---
+
 🧩 Recommended Dependencies
 
     Niri
@@ -86,6 +200,8 @@ WALLPAPER_DIR="$HOME/Pictures/Wallpapers"
     Fastfetch
 
     Cava
+
+    Nautilus
 
     Rofi
 
