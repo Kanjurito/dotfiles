@@ -21,7 +21,6 @@ PanelWindow {
     implicitHeight: 450
     color: "transparent"
 
-    // --- Propriétés de l'API waifu.pics ---
     property string imageSource: ""
     property var tags: ["waifu", "neko", "trap", "blowjob"]
     property int tagIndex: 0
@@ -29,7 +28,7 @@ PanelWindow {
     property bool loading: false
 
     function fetchImage() {
-        if (root.loading) return; // Évite les requêtes multiples en parallèle
+        if (root.loading) return;
         root.loading = true
         fetchProc.running = false
         fetchProc.running = true
@@ -37,14 +36,12 @@ PanelWindow {
 
     Process {
         id: fetchProc
-        // L'URL utilise maintenant le format /type/category
         command: ["curl", "-s", "https://api.waifu.pics/nsfw/" + root.selectedTag]
 
         stdout: SplitParser {
             onRead: data => {
                 try {
                     const json = JSON.parse(data)
-                    // waifu.pics renvoie directement l'objet { "url": "..." }
                     if (json.url) {
                         root.imageSource = json.url
                     }
@@ -56,7 +53,6 @@ PanelWindow {
         }
     }
 
-    // Rafraîchissement automatique toutes les 2 minutes
     Timer {
         interval: 120000; running: true; repeat: true
         onTriggered: root.fetchImage()
@@ -72,8 +68,6 @@ PanelWindow {
         border.color: "#2a1a4a"
         border.width: 1
         clip: true
-
-        // Indicateur de chargement
         Rectangle {
             anchors.centerIn: parent
             width: 40; height: 40; radius: 20
@@ -88,7 +82,6 @@ PanelWindow {
             }
         }
 
-        // Affichage de l'image
         Image {
             id: waifuImg
             anchors.fill: parent
@@ -96,7 +89,6 @@ PanelWindow {
             fillMode: Image.PreserveAspectCrop
             visible: !root.loading && root.imageSource !== ""
 
-            // Arrondi des angles de l'image via MultiEffect
             layer.enabled: true
             layer.effect: MultiEffect {
                 maskEnabled: true
@@ -107,8 +99,6 @@ PanelWindow {
                 }
             }
         }
-
-        // Zone cliquable pour changer de tag et d'image
         MouseArea {
             anchors.fill: parent
             cursorShape: Qt.PointingHandCursor
