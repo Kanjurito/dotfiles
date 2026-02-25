@@ -57,9 +57,10 @@ ln -sf ~/dotfiles-niri/eww ~/.config/eww
 🎨 Important: Wallpaper Carousel Configuration
 
 Inside:
-Code
+```bash
 
 niri/scripts/wallpaper_carrousel
+```
 
 You must edit the following variable:
 ```bash
