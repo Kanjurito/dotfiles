@@ -28,7 +28,7 @@ PanelWindow {
     property bool loading: false
 
     function fetchImage() {
-        if (root.loading) return; // Évite les requêtes multiples en parallèle
+        if (root.loading) return;
         root.loading = true
         fetchProc.running = false
         fetchProc.running = true
