@@ -32,9 +32,9 @@ This repository contains everything needed to reproduce my lightweight, fast, an
 | **niri/scripts/wallpaper_carrousel** | Automatic wallpaper rotation script |
 | **waybar/** | Custom Waybar configuration |
 | **fastfetch/** | Fastfetch configuration |
-| **eww/** | Widgets (powermenu, modules, etc.) |
+| **eww/** | Powermenu Widgets |
 | **alacritty/** | Theme + keybinds |
-| **quickshell/**  | media player,user menu and waifu widgets |
+| **quickshell/**  | Media player,user menu and waifu widgets |
 
 ---
 
@@ -91,5 +91,7 @@ WALLPAPER_DIR="$HOME/Pictures/Wallpapers"
 
     Nerd Fonts
 
-    Alacritty (planned)
+    Alacritty
+
+    Quickshell
 .
