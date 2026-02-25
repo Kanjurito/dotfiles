@@ -1,6 +1,6 @@
 # 🜸 Niri Dotfiles — Complete Wayland Setup
 
-Personal configuration for **Niri**, **Waybar**, **Fastfetch**, **Eww**, and soon **Alacritty** + **Quickshell**.  
+Personal configuration for **Niri**, **Waybar**, **Fastfetch**, **Eww**, **Alacritty** and **Quickshell**.  
 This repository contains everything needed to reproduce my lightweight, fast, and cohesive Wayland environment.
 
 ---
