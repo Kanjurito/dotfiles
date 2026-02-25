@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Dossier des images (bien mis entre guillemets à cause des espaces)
-WALLPAPER_DIR="/run/media/alterra/Steam_epic/Fond d'ecran"
+WALLPAPER_DIR="/home/alterra/Images/wallpaper"
 
 # Temps entre chaque image (en secondes) - ici 300s = 5 minutes
 INTERVAL=300

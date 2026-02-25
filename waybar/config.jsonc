@@ -10,7 +10,7 @@
   "modules-right": ["custom/notification", "group/audio", "bluetooth", "network", "battery", "clock", "custom/user", "custom/power"],
 
   "custom/rofi": {
-    "format": "󰍉",
+    "format": "",
     "on-click": "rofi -show drun",
     "tooltip": false,
   },
@@ -62,7 +62,7 @@
   },
 
   "pulseaudio": {
-    "format": "{icon}",
+    "format": "󰓃",
     "format-muted": "󰝟",
     "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
     "on-click": "pavucontrol",
@@ -75,11 +75,13 @@
     "on-click": "blueman-manager",
   },
 
-  "network": {
-    "format-wifi": "",
-    "on-click": "alacritty -e nmtui",
-  },
-
+"network": {
+  "format-wifi": "",
+  "format-ethernet": "󰈀",
+  "format-disconnected": "󰖪",
+  "tooltip": false,
+  "on-click": "alacritty -e nmtui"
+},
   "battery": {
     "format": "{icon}",
     "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
@@ -88,7 +90,7 @@
   "clock": { "format": "{:%H\n%M}" },
 
   "custom/user": {
-    "format": "󰀄",
+    "format": "",
     "on-click": "bash ~/.config/quickshell/user-menu/toggle.sh",
     "tooltip": false,
   },

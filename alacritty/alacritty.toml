@@ -1,0 +1,65 @@
+[window]
+padding.x = 14
+padding.y = 14
+decorations = "None"
+opacity = 0
+
+[font]
+normal  = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold    = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic  = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+size    = 12.0
+offset  = { x = 0, y = 4 }
+
+[cursor]
+style           = { shape = "Beam", blinking = "On" }
+blink_interval  = 600
+unfocused_hollow = true
+
+[scrolling]
+history = 10000
+
+[colors.primary]
+background = "#000000"
+foreground = "#c0caf5"
+
+[colors.cursor]
+cursor = "#bb9af7"
+text   = "#1a1b2e"
+
+[colors.selection]
+background = "#283457"
+text       = "CellForeground"
+
+[colors.normal]
+black   = "#15161e"
+red     = "#f7768e"
+green   = "#9ece6a"
+yellow  = "#e0af68"
+blue    = "#7aa2f7"
+magenta = "#bb9af7"
+cyan    = "#7dcfff"
+white   = "#a9b1d6"
+
+[colors.bright]
+black   = "#414868"
+red     = "#f7768e"
+green   = "#9ece6a"
+yellow  = "#e0af68"
+blue    = "#7aa2f7"
+magenta = "#bb9af7"
+cyan    = "#7dcfff"
+white   = "#c0caf5"
+
+[colors.footer_bar]
+background = "#16161e"
+foreground = "#c0caf5"
+
+[bell]
+animation = "EaseOutExpo"
+duration  = 0
+
+[terminal]
+
+[terminal.shell]
+program = "/bin/zsh"

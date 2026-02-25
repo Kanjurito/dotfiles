@@ -7,11 +7,13 @@ spawn-at-startup "swww-daemon"
 spawn-at-startup "~/.config/niri/script/wallpaper_carousel.sh"
 spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/media-player"
 spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/user-menu"
-spawn-at-startup "xwayland-satellite" // Si tu utilises xwayland-satellite (recommandé pour Niri)
+spawn-at-startup "xwayland-satellite"
 spawn-at-startup "Xwayland" ":1"
+spawn-at-startup "gtk-launch" "com.discordapp.Discord"
+spawn-at-startup "quickshell" "-p" "~/dotfiles/quickshell/waifu-widget"
 // General Settings
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png"
-
+prefer-no-csd
 // Dell screen
 output "DP-1" {
     mode "1920x1200@59.950"
@@ -55,7 +57,7 @@ cursor {
 overview {
     backdrop-color "#1E1E2E"
     workspace-shadow {
-        off
+        on
     }
 }
 
@@ -64,10 +66,13 @@ layer-rule {
     place-within-backdrop true
 }
 window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+window-rule {
     match title="eww-powermenu"
     draw-border-with-background false
     geometry-corner-radius 0
-    // On force Niri à ne pas mettre d'ombre sur la fenêtre parente (le plein écran)
     default-column-width { proportion 1.0; } 
 }
 binds {
@@ -77,13 +82,12 @@ binds {
     MOD+SHIFT+ESCAPE { show-hotkey-overlay; }
 
 
-    // Applications
     MOD+A { spawn "rofi" "-show" "drun"; }
     MOD+B { spawn "firefox"; }
     MOD+E { spawn "nautilus"; }
-
-    // Fond d'écran (Carrousel)
+    MOD+SHIFT+D { spawn "env" "DISPLAY=:0" "discord" "--disable-gpu-sandbox"; }
     MOD+W { spawn "/home/alterra/.config/niri/script/wallpaper_carousel.sh"; }
+    MOD+SHIFT+W { spawn "quickshell" "-p" "~/dotfiles/quickshell/waifu-widget";}
 
     // Media Keys
     XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "mediactl volume_up"; }
@@ -193,8 +197,8 @@ binds {
     MOD+CTRL+C                          { center-visible-columns; }
     MOD+BRACKETLEFT                     { set-column-width "-10%"; }
     MOD+BRACKETRIGHT                    { set-column-width "+10%"; }
-    MOD+SHIFT+BRACKETLEFT               { set-window-height "-10%"; }
-    MOD+SHIFT+BRACKETRIGHT              { set-window-height "+10%"; }
+    MOD+ALT+WHEELSCROLLDOWN             { set-window-width "-10%"; }
+    MOD+ALT+WHEELSCROLLUP               { set-window-width "+10%"; }
 
     // Window resizing with mouse
     MOD+CTRL+WHEELSCROLLDOWN            { set-window-height "-5%"; }
@@ -228,7 +232,7 @@ binds {
 	}
 // Layout Settings
 layout {
-    gaps 0
+    gaps 16
     center-focused-column "on-overflow"
     background-color "transparent"
 

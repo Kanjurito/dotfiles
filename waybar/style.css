@@ -14,6 +14,7 @@ window#waybar {
 #pulseaudio,
 #battery,
 #clock,
+#custom-user,
 #custom-power {
     background-color: #1e1e2e;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -66,12 +67,10 @@ window#waybar {
     color: #cba6f7;
     font-weight: bold;
 }
-
 #custom-user {
     color: #cba6f7;
     font-size: 20px;
 }
-
 #custom-power {
     color: #f38ba8;
     font-size: 20px;
