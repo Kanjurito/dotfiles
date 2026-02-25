@@ -33,8 +33,8 @@ This repository contains everything needed to reproduce my lightweight, fast, an
 | **waybar/** | Custom Waybar configuration |
 | **fastfetch/** | Fastfetch configuration |
 | **eww/** | Widgets (powermenu, modules, etc.) |
-| **alacritty/** *(coming soon)* | Theme + keybinds |
-| **quickshell/** *(coming soon)* | Advanced widgets |
+| **alacritty/** | Theme + keybinds |
+| **quickshell/**  | media player,user menu and waifu widgets |
 
 ---
 
