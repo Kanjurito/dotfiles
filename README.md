@@ -8,13 +8,17 @@ This repository contains everything needed to reproduce my lightweight, fast, an
 ## 📸 Screenshots
 
 ### 🧊 Fastfetch
-<img width="1919" height="1079" alt="fastfetch screenshot" src="https://github.com/user-attachments/assets/8b10eece-c955-4fd9-9aa1-30c45bf9956f" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/948a8864-06e0-4a74-be1f-0ef302e54758" />
 
 ### 🔍 Rofi (custom theme)
-<img width="1910" height="1078" alt="rofi screenshot" src="https://github.com/user-attachments/assets/e768718c-f2cd-4331-bfe9-40a6d00f61dc" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c70b4ec0-b94f-454d-a7ab-176733e89556" />
+
 
 ### ⚡ Eww Powermenu
-<img width="1919" height="1080" alt="eww powermenu screenshot" src="https://github.com/user-attachments/assets/3d5d1c2b-7178-4420-967e-9581a5b3dc57" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/794fcbf0-b4a8-4a68-bda0-41637c73e83c" />
+###  Music,homemenu and waifu widget
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2d9b571d-0af0-436f-aa1f-351111fab006" />
+
 
 ---
 
@@ -40,6 +44,14 @@ Clone the repository:
 git clone https://github.com/Kanjurito/dotfiles.git
 cd ~/dotfiles
 ```
+copy to your .config folder
+```bash
+ln -sf ~/dotfiles-niri/niri ~/.config/niri
+ln -sf ~/dotfiles-niri/waybar ~/.config/waybar
+ln -sf ~/dotfiles-niri/fastfetch ~/.config/fastfetch
+ln -sf ~/dotfiles-niri/eww ~/.config/eww
+```
+
 🎨 Important: Wallpaper Carousel Configuration
 
 Inside:
