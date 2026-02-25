@@ -85,6 +85,8 @@ WALLPAPER_DIR="$HOME/Pictures/Wallpapers"
 
     Fastfetch
 
+    Cava
+
     Rofi
 
     Swww (for wallpapers)
