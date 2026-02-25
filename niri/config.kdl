@@ -7,18 +7,18 @@ spawn-at-startup "swww-daemon"
 spawn-at-startup "~/.config/niri/script/wallpaper_carousel.sh"
 spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/media-player"
 spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/user-menu"
+spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/dotfiles/quickshell/waifu-widget"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "Xwayland" ":1"
 spawn-at-startup "gtk-launch" "com.discordapp.Discord"
-spawn-at-startup "quickshell" "-p" "~/dotfiles/quickshell/waifu-widget"
 // General Settings
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png"
 prefer-no-csd
 // Dell screen
 output "DP-1" {
     mode "1920x1200@59.950"
-    transform "90" // Rotation pour la verticale
-    position x=-1200 y=0 // Placé à gauche du centre
+    transform "90"
+    position x=-1200 y=-100
 }
 
 // Lenovo screen
@@ -31,7 +31,7 @@ output "DP-2" {
 // Philips screen
 output "HDMI-A-1" {
     mode "1440x900@59.887"
-    position x=1920 y=0 // Placé après le Lenovo
+    position x=1920 y=0
 }
 
 // TV (Disable)
@@ -73,7 +73,7 @@ window-rule {
     match title="eww-powermenu"
     draw-border-with-background false
     geometry-corner-radius 0
-    default-column-width { proportion 1.0; } 
+    default-column-width { proportion 1.0; }
 }
 binds {
     // Session
