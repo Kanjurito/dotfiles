@@ -1,0 +1,2 @@
+module DesktopClock
+ClockWidget 1.0 ClockWidget.qml

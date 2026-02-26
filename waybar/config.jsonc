@@ -72,7 +72,7 @@
 
   "bluetooth": {
     "format": "󰂯",
-    "on-click": "blueman-manager",
+    "on-click": "blueberry",
   },
 
 "network": {
