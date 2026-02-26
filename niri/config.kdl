@@ -2,7 +2,6 @@
 spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &"
 spawn-at-startup "awww-daemon"
 spawn-at-startup "waybar"
-spawn-at-startup "sh" "-c" "vicinae server &"
 spawn-at-startup "swww-daemon"
 spawn-at-startup "~/.config/niri/script/wallpaper_carousel.sh"
 spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/media-player"
