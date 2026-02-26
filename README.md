@@ -48,10 +48,12 @@ cd ~/dotfiles
 ```
 copy to your .config folder
 ```bash
-ln -sf ~/dotfiles-niri/niri ~/.config/niri
-ln -sf ~/dotfiles-niri/waybar ~/.config/waybar
-ln -sf ~/dotfiles-niri/fastfetch ~/.config/fastfetch
-ln -sf ~/dotfiles-niri/eww ~/.config/eww
+ln -sf ~/dotfiles/niri ~/.config/niri
+ln -sf ~/dotfiles/waybar ~/.config/waybar
+ln -sf ~/dotfiles/fastfetch ~/.config/fastfetch
+ln -sf ~/dotfiles/eww ~/.config/eww
+ln -sf ~/dotfiles/alacritty ~/.config/alacritty
+ln -sf ~/dotfiles/quickshell ~/.config/quickshell
 ```
 
 🎨 Important: Wallpaper Carousel Configuration
