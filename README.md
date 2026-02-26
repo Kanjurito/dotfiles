@@ -18,9 +18,8 @@ This repository contains everything needed to reproduce my lightweight, fast, an
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/794fcbf0-b4a8-4a68-bda0-41637c73e83c" />
 
 
-### 🎵 Music, Home Menu & Waifu Widget
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d76be22a-7023-4ee9-82e3-5ce720593bc3" />
-
+### 🎵 Music, Home Menu, Clock & Waifu Widget
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1c12d35c-c95f-43f8-b5b4-6b46e28cb202" />
 ---
 
 ## 📂 Repository Structure
