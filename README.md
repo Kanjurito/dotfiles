@@ -19,8 +19,7 @@ This repository contains everything needed to reproduce my lightweight, fast, an
 
 
 ### 🎵 Music, Home Menu & Waifu Widget
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2d9b571d-0af0-436f-aa1f-351111fab006" />
-
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d76be22a-7023-4ee9-82e3-5ce720593bc3" />
 
 ---
 
