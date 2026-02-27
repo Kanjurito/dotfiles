@@ -15,3 +15,20 @@
 [33m  WARN[97m scene[0m: @shell.qml[8:-1]: ReferenceError: modelData is not defined
 [32m  INFO[0m: Configuration Loaded
 [33m  WARN[97m qt.qpa.services[0m: Failed to register with host portal QDBusError("org.freedesktop.portal.Error.Failed", "Could not register app ID: Connection already associated with an application ID")
+[32m  INFO[0m: Launching config: "/home/alterra/dotfiles/quickshell/desktop-clock/shell.qml"
+[32m  INFO[0m: Shell ID: "412e4a4789002977bf42b6b34bad310b" Path ID "412e4a4789002977bf42b6b34bad310b"
+[32m  INFO[0m: Saving logs to "/run/user/1000/quickshell/by-id/snn1zxi4bt/log.qslog"
+[33m  WARN[0m: qs:@/qs/shell.qml: Setting initial properties failed: ClockWidget does not have a property called modelData
+[33m  WARN[0m: qs:@/qs/shell.qml: Setting initial properties failed: ClockWidget does not have a property called modelData
+[33m  WARN[0m: qs:@/qs/shell.qml: Setting initial properties failed: ClockWidget does not have a property called modelData
+[33m  WARN[97m scene[0m: @ClockWidget.qml[18:-1]: TypeError: Cannot read property 'height' of undefined
+[33m  WARN[97m scene[0m: @ClockWidget.qml[17:-1]: TypeError: Cannot read property 'width' of undefined
+[33m  WARN[97m scene[0m: @shell.qml[8:-1]: ReferenceError: modelData is not defined
+[33m  WARN[97m scene[0m: @ClockWidget.qml[18:-1]: TypeError: Cannot read property 'height' of undefined
+[33m  WARN[97m scene[0m: @ClockWidget.qml[17:-1]: TypeError: Cannot read property 'width' of undefined
+[33m  WARN[97m scene[0m: @shell.qml[8:-1]: ReferenceError: modelData is not defined
+[33m  WARN[97m scene[0m: @ClockWidget.qml[18:-1]: TypeError: Cannot read property 'height' of undefined
+[33m  WARN[97m scene[0m: @ClockWidget.qml[17:-1]: TypeError: Cannot read property 'width' of undefined
+[33m  WARN[97m scene[0m: @shell.qml[8:-1]: ReferenceError: modelData is not defined
+[32m  INFO[0m: Configuration Loaded
+[33m  WARN[97m qt.qpa.services[0m: Failed to register with host portal QDBusError("org.freedesktop.portal.Error.Failed", "Could not register app ID: Connection already associated with an application ID")
