@@ -49,6 +49,7 @@ hotkey-overlay {
     skip-at-startup
 }
 
+
 cursor {
     hide-when-typing
     hide-after-inactive-ms 5000

@@ -22,7 +22,7 @@ PanelWindow {
     color: "transparent"
 
     property string imageSource: ""
-    property var tags: ["waifu", "neko", "shinobu", "megumin", "bully", "cuddle", "awoo", "smug", "shinobu"]
+    property var tags: ["waifu", "neko", "shinobu", "bully", "cuddle", "awoo", "smug", "shinobu"]
     property int tagIndex: 0
     property string selectedTag: tags[tagIndex]
     property bool loading: false
