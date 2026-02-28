@@ -11,6 +11,7 @@ spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/dotfiles/quickshell/desktop-clo
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "Xwayland" ":1"
 spawn-at-startup "gtk-launch" "com.discordapp.Discord"
+include "colors.kdl"
 // General Settings
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png"
 prefer-no-csd
@@ -242,20 +243,20 @@ layout {
         proportion 0.5
         proportion 0.66667
     }
-
-focus-ring {
-        width 2
-        active-color "#242424"
-        inactive-color "#FFFFFF00"
-    }
-    insert-hint {
-        off
-        color "#1E1E2E"
-    }
-
-    struts {}
-
 }
+//focus-ring {
+//        width 2
+//        active-color "#242424"
+//        inactive-color "#FFFFFF00"
+//    }
+//    insert-hint {
+//        off
+//        color "#1E1E2E"
+//    }
+//
+//    struts {}
+//
+//}
 
 // Animation Settings
 animations {

@@ -17,8 +17,8 @@ PanelWindow {
     anchors { right: true; bottom: true }
     margins { right: 150; bottom: 500 }
 
-    implicitWidth: 370
-    implicitHeight: 450
+    implicitWidth: 470
+    implicitHeight: 550
     color: "transparent"
 
     property string imageSource: ""

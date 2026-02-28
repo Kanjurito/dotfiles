@@ -1,0 +1,20 @@
+# UNIQUEMENT les couleurs de texte (normal et bright)
+[colors.normal]
+black =   "#4B432E"
+red =     "#434554"
+green =   "#587865"
+yellow =  "#8F7064"
+blue =    "#4A82A9"
+magenta = "#B45C98"
+cyan =    "#179F73"
+white =   "#7D7F88"
+
+[colors.bright]
+black =   "#58595F"
+red =     "#434554"
+green =   "#587865"
+yellow =  "#8F7064"
+blue =    "#4A82A9"
+magenta = "#B45C98"
+cyan =    "#179F73"
+white =   "#7D7F88"
