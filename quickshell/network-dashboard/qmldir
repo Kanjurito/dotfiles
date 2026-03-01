@@ -1,0 +1,4 @@
+module NetworkDashboard
+NetworkDashboard 1.0 NetworkDashboard.qml
+StatRow 1.0 StatRow.qml
+SshButton 1.0 SshButton.qml

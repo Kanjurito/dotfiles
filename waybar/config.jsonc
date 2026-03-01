@@ -7,7 +7,7 @@
 
   "modules-left": ["custom/rofi", "custom/launcher"],
   "modules-center": ["mpris", "tray", "custom/media"],
-  "modules-right": ["custom/notification", "group/audio", "bluetooth", "network", "battery", "clock", "custom/user", "custom/power"],
+  "modules-right": ["custom/notification", "group/audio", "bluetooth", "network", "battery","custom/network", "custom/user", "custom/power"],
 
   "custom/rofi": {
     "format": "",
@@ -39,6 +39,12 @@
     "icon-size": 18,
     "spacing": 10,
   },
+
+"custom/network": {
+    "format": "󰈀",
+    "on-click": "bash ~/.config/quickshell/network-dashboard/toggle.sh",
+    "tooltip": false
+},
 
   "custom/notification": {
     "tooltip": false,
@@ -94,7 +100,12 @@
     "on-click": "bash ~/.config/quickshell/user-menu/toggle.sh",
     "tooltip": false,
   },
-
+  
+  "custom/network": {
+    "format": "󱂇",
+    "on-click": "bash ~/.config/quickshell/network-dashboard/toggle.sh",
+    "tooltip": false
+},
   "custom/power": {
     "format": "",
     "on-click": "eww -c ~/.config/eww/powermenu/ open --toggle powermenu",
