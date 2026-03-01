@@ -2,7 +2,7 @@ layout {
     focus-ring {
         width 2
         active-color "#EFECC3"
-        inactive-color "#A7A69800" // Le 00 à la fin rend la bordure inactive transparente
+        inactive-color "#A7A69800" 
     }
 
     insert-hint {
@@ -10,6 +10,5 @@ layout {
         color "#38393A"
     }
 
-    // On remet le struts vide si tu en avais besoin
     struts {}
 }

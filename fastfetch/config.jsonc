@@ -12,7 +12,6 @@
   "logo": {
     "color": {"1": "blue", "2": "black"},
     "source": "$(find \"${XDG_CONFIG_HOME:-$HOME/.config}/fastfetch/png/\" -name \"*.png\" | shuf -n 1)",
-//    "source": "$HOME/.config/fastfetch/ascii/rose.txt",
     "padding": {
       "top": 4,
       "right": 5
