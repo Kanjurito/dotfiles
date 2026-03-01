@@ -7,8 +7,8 @@ This repository contains everything needed to reproduce my lightweight, fast, an
 
 ## 📸 Screenshots
 
-### 🧊 Fastfetch
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/948a8864-06e0-4a74-be1f-0ef302e54758" />
+### 🧊 Fastfetch (multiple images possible,in /fastfetch/png)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ba74c53d-f34b-43f8-a2e5-646ddb9d9c63" />
 
 ### 🔍 Rofi (custom theme)
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c70b4ec0-b94f-454d-a7ab-176733e89556" />
