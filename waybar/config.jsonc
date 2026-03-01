@@ -17,7 +17,7 @@
 
   "custom/launcher": {
     "format": "",
-    "on-click": "alacritty",
+    "on-click": "kitty",
     "tooltip": false,
   },
   "custom/media": {
