@@ -207,7 +207,7 @@ A complete overview of all custom keybindings used in this Niri setup.
 
     Nerd Fonts
 
-    Alacritty
+    kitty
 
     Quickshell
     
