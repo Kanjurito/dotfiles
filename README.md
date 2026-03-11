@@ -20,6 +20,11 @@ This repository contains everything needed to reproduce my lightweight, fast, an
 
 ### 🎵 Music, Home Menu, Clock & Waifu Widget
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1c12d35c-c95f-43f8-b5b4-6b46e28cb202" />
+
+
+### Dashboard :
+<img width="1917" height="1079" alt="image" src="https://github.com/user-attachments/assets/19da88f2-77a0-4e05-a308-a5c353e4b5ac" />
+
 ---
 
 ## 📂 Repository Structure
