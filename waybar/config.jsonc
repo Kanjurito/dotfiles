@@ -5,9 +5,9 @@
   "margin": 10,
   "spacing": 10,
 
-  "modules-left": ["custom/rofi", "custom/launcher"],
+  "modules-left": ["custom/rofi", "custom/launcher","custom/control"],
   "modules-center": ["mpris", "tray", "custom/media"],
-  "modules-right": ["custom/notification", "group/audio", "bluetooth", "network", "battery","custom/network", "custom/user", "custom/power"],
+  "modules-right": ["custom/notification", "group/audio", "custom/backlight", "bluetooth", "network", "battery","custom/network", "custom/user", "custom/power"],
 
   "custom/rofi": {
     "format": "",
@@ -67,11 +67,21 @@
     "modules": ["pulseaudio", "pulseaudio/slider"],
   },
 
+"custom/backlight": {
+    "exec": "~/.config/waybar/scripts/get_brightness.sh",
+    "interval": 5,
+    "format": "{icon}",
+    "tooltip": true,
+    "format-icons": ["󰃞", "󰃟", "󰃠"],
+    "on-scroll-up": "~/.config/niri/script/brightness.sh up",
+    "on-scroll-down": "~/.config/niri/script/brightness.sh down"
+},
+
   "pulseaudio": {
     "format": "󰓃",
     "format-muted": "󰝟",
     "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
-    "on-click": "pavucontrol",
+    "on-click": "pwvucontrol",
   },
 
   "pulseaudio/slider": { "min": 0, "max": 100, "orientation": "vertical" },
@@ -104,6 +114,11 @@
   "custom/network": {
     "format": "󱂇",
     "on-click": "bash ~/.config/quickshell/network-dashboard/toggle.sh",
+    "tooltip": false
+},
+"custom/control": {
+    "format": "󰹯",
+    "on-click": "bash ~/dotfiles/quickshell/control-center/toggle.sh",
     "tooltip": false
 },
   "custom/power": {

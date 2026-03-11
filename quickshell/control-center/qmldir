@@ -1,0 +1,9 @@
+module ControlCenter
+ControlCenter 1.0 ControlCenter.qml
+ToggleCard 1.0 ToggleCard.qml
+SliderRow 1.0 SliderRow.qml
+StatChip 1.0 StatChip.qml
+ActionBtn 1.0 ActionBtn.qml
+BluetoothMenu 1.0 BluetoothMenu.qml
+WifiMenu 1.0 WifiMenu.qml
+AudioMenu 1.0 AudioMenu.qml

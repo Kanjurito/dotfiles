@@ -5,6 +5,7 @@ window#waybar {
 
 #custom-rofi,
 #custom-launcher,
+#custom-backlight,
 #custom-media,
 #mpris,
 #tray,
@@ -16,6 +17,7 @@ window#waybar {
 #clock,
 #custom-network,
 #custom-user,
+#custom-control,
 #custom-power {
     background-color: #1e1e2e;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -24,7 +26,10 @@ window#waybar {
     margin-bottom: 2px;
     color: #cdd6f4;
 }
-
+#custom-control {
+    color: #89dceb;
+    font-size: 20px;
+}
 #custom-rofi {
     color: #cba6f7;
     font-size: 20px;
@@ -93,4 +98,8 @@ window#waybar {
 #pulseaudio-slider highlight {
     border-radius: 5px;
     background-color: #fab387;
+}
+#custom-backlight {
+    color: #f9e2af;
+    font-size: 18px;
 }
