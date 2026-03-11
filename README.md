@@ -23,7 +23,7 @@ This repository contains everything needed to reproduce my lightweight, fast, an
 
 
 ### Dashboard :
-<img width="1917" height="1079" alt="image" src="https://github.com/user-attachments/assets/19da88f2-77a0-4e05-a308-a5c353e4b5ac" />
+<img width="1917" height="1079" alt="image" src="https://github.com/user-attachments/assets/01997bd5-93d2-4818-a365-48cf7144865d" />
 
 ---
 
