@@ -11,7 +11,7 @@ while true; do
     EXT=$(echo "$EXT" | tr '[:upper:]' '[:lower:]')
 
     echo "Chargement de : $FILE"
-    wallust run -n "$FILE"
+    wallust run "$FILE"
 
     if [[ "$EXT" == "mp4" || "$EXT" == "mkv" || "$EXT" == "webm" || "$EXT" == "mov" ]]; then
         pkill mpvpaper

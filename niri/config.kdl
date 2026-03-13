@@ -10,6 +10,7 @@ spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/dotfiles/quickshell/waifu-widge
 spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/dotfiles/quickshell/desktop-clock"
 spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/dotfiles/quickshell/control-center"
 spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/dotfiles/quickshell/network-dashboard"
+spawn-at-startup "bash" "/home/alterra/dotfiles/niri/script/start-visualizer.sh"
 spawn-at-startup "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=niri"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "Xwayland" ":1"
