@@ -12,7 +12,6 @@ while True:
                 data = f.read(bars)
                 if not data:
                     break
-                # Émet les valeurs séparées par des espaces + newline
                 print(" ".join(str(b) for b in data), flush=True)
     except Exception:
         import time

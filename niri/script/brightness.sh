@@ -1,7 +1,7 @@
 #!/bin/bash
 BUSES=(0 1 3)
 STEP=10
-ACTION=$1 # "up" ou "down"
+ACTION=$1
 
 for BUS in "${BUSES[@]}"; do
     if [ "$ACTION" == "up" ]; then

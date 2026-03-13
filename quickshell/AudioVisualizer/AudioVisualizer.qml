@@ -63,7 +63,6 @@ PanelWindow {
         }
     }
 
-    // Lit le FIFO via python qui convertit les bytes en texte lisible
     Process {
         id: cavaReader
         command: ["python3", "/home/alterra/dotfiles/quickshell/AudioVisualizer/cava-reader.py",
