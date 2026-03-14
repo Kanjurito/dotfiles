@@ -133,7 +133,6 @@ PanelWindow {
             anchors.topMargin: 18
             spacing: 14
 
-            // === CLOCK + ACTIONS ===
             Row {
                 width: parent.width; height: 40
 
@@ -169,7 +168,7 @@ PanelWindow {
                         Process { id: swayncProc; command: ["swaync-client", "-t", "-sw"] }
                     }
                     // Power
-                    ActionBtn { icon: ""; accent: "#f38ba8"
+                    ActionBtn { icon: "󰐥"; accent: "#f38ba8"
                         onClicked: powerProc.running = true
                         Process { id: powerProc; command: ["eww", "-c", "/home/alterra/.config/eww/powermenu/", "open", "--toggle", "powermenu"] }
                     }
