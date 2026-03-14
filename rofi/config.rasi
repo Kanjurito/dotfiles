@@ -26,4 +26,4 @@ configuration{
     kb-move-char-forward: "Control+f";
     kb-mode-complete: "Control+o";
 }
-@theme "/home/alterra/.config/rofi/wallust-theme.rasi"
+@theme "~/.config/rofi/wallust-theme.rasi"
