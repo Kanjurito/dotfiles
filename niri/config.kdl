@@ -1,7 +1,7 @@
 // Startup Applications
 spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &"
 spawn-at-startup "awww-daemon"
-spawn-at-startup "waybar"
+spawn-at-startup "bash" "-c" "sleep 1 && qs -p ~/dotfiles/quickshell/bar"
 spawn-at-startup "swww-daemon"
 spawn-at-startup "~/.config/niri/script/wallpaper_carousel.sh"
 spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/media-player"
@@ -225,10 +225,6 @@ binds {
     MOD+CTRL+S                          { screenshot-window write-to-disk=true; }
     MOD+P                               { spawn-sh "pgrep -x hyprpicker >/dev/null || hyprpicker"; }
 
-    // Application Restarts
-    MOD+ALT+W                           { spawn "sh" "-c" "pgrep -x waybar >/dev/null && killall waybar || waybar &"; }
-    // use with toggle in waybar (doens't restart if not running)
-    // MOD+ALT+W                           { spawn "killall" "-SIGUSR1" "waybar"; }
 	MOD+SHIFT+F { fullscreen-window; }
 	MOD+MINUS { set-column-width "-10%"; }
     	MOD+EQUAL { set-column-width "+10%"; }
@@ -411,21 +407,17 @@ window-rule {
     opacity 0.9
 }
 
-// Environment Variables
 environment {
-    // Variables Nvidia
     LIBVA_DRIVER_NAME "nvidia"
     WLR_NO_HARDWARE_CURSORS "1"
     __GLX_VENDOR_LIBRARY_NAME "nvidia"
     GBM_BACKEND "nvidia-drm"
 
-    // Paramètres de session
     DISPLAY null
     ELECTRON_OZONE_PLATFORM_HINT "auto"
     XDG_SESSION_TYPE "wayland"
     XDG_CURRENT_DESKTOP "GNOME"
 
-    // Wayland Platform Settings
     QT_QPA_PLATFORM "wayland"
     QT_QPA_PLATFORMTHEME "gtk3"
     QT_QPA_PLATFORMTHEME_QT6 "gtk3"
