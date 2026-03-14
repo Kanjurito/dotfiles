@@ -7,25 +7,16 @@ This repository contains everything needed to reproduce my lightweight, fast, an
 
 ## 📸 Screenshots
 
-### 🧊 Fastfetch (multiple images possible,in /fastfetch/png)
+| Fastfetch & Terminal | Rofi Custom Theme |
+| :---: | :---: |
+| <img src="screenshots/fastfetch.png" width="400"> | <img src="screenshots/rofi.webp" width="400"> |
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ba74c53d-f34b-43f8-a2e5-646ddb9d9c63" />
+| Eww Powermenu | Dashboard & Widgets |
+| :---: | :---: |
+| <img src="screenshots/eww_powermenu.png" width="400"> | <img src="screenshots/dashboard.png" width="400"> |
 
-### 🔍 Rofi (custom theme)
-
-<img width="1920" height="1080" alt="image" src="https://media.discordapp.net/attachments/1383867884521918474/1482459866663489576/image.png?ex=69b707d6&is=69b5b656&hm=dcfe3094caac58c4136914a54f993d0902a1a4458370b5db3d5d6f5fd595a02a&=&format=webp&quality=lossless) />
-
-### ⚡ Eww Powermenu
-
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/794fcbf0-b4a8-4a68-bda0-41637c73e83c" />
-
-### 🎵 Music, Home Menu, Clock & Waifu Widget
-
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1c12d35c-c95f-43f8-b5b4-6b46e28cb202" />
-
-### Dashboard :
-
-<img width="1917" height="1079" alt="image" src="https://github.com/user-attachments/assets/01997bd5-93d2-4818-a365-48cf7144865d" />
+### 🎵 Music & QuickShell Widgets
+<img src="screenshots/widgets.png" width="100%" alt="Music and Waifu widgets">
 
 ---
 
