@@ -11,7 +11,7 @@ This repository contains everything needed to reproduce my lightweight, fast, an
 | :---: | :---: |
 | <img src="screenshots/fastfetch.png" width="400"> | <img src="screenshots/rofi.webp" width="400"> |
 
-| Eww Powermenu | Dashboard & Widgets |
+| Eww Powermenu | Dashboard |
 | :---: | :---: |
 | <img src="screenshots/eww_powermenu.png" width="400"> | <img src="screenshots/dashboard.png" width="400"> |
 
