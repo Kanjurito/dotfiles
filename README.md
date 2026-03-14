@@ -13,7 +13,7 @@ This repository contains everything needed to reproduce my lightweight, fast, an
 
 ### 🔍 Rofi (custom theme)
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c70b4ec0-b94f-454d-a7ab-176733e89556" />
+<img width="1920" height="1080" alt="image" src="[https://github.com/user-attachments/assets/c70b4ec0-b94f-454d-a7ab-176733e89556](https://media.discordapp.net/attachments/1383867884521918474/1482459866663489576/image.png?ex=69b707d6&is=69b5b656&hm=dcfe3094caac58c4136914a54f993d0902a1a4458370b5db3d5d6f5fd595a02a&=&format=webp&quality=lossless)" />
 
 ### ⚡ Eww Powermenu
 
