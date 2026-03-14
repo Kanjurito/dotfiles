@@ -7,11 +7,11 @@ configuration {
 }
 
 * {
-    bg:      #000206cc;
-    bg-alt:  #8CA1A3;
-    fg:      #DEF3F6;
-    accent:  #AD8150;
-    urgent:  #61343A;
+    bg:      #030017cc;
+    bg-alt:  #A2A7AA;
+    fg:      #F5F9FC;
+    accent:  #DCABAE;
+    urgent:  #467BF1;
 
     background-color: transparent;
     text-color:       @fg;
