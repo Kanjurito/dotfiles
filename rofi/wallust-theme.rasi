@@ -1,0 +1,64 @@
+/* ~/.config/wallust/rofi.rasi */
+
+configuration {
+    modi:                       "drun";
+    show-icons:                 true;
+    display-drun:               "󰍉"; 
+}
+
+* {
+    bg:      #111215cc;
+    bg-alt:  #A2A9A0;
+    fg:      #F5FCF2;
+    accent:  #7DB4DF;
+    urgent:  #C9565E;
+
+    background-color: transparent;
+    text-color:       @fg;
+}
+window {
+    width:            800px;
+    border:           2px;
+    border-radius:    15px;
+    border-color:     @accent;
+    background-color: @bg;
+    location:         center;
+    y-offset:         -100px;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    padding: 25px;
+}
+
+inputbar {
+    background-color: @bg-alt;
+    border-radius:    10px;
+    margin:           0 0 20px 0;
+    padding:          10px 20px;
+    children:         [ prompt, entry ];
+}
+
+prompt { text-color: @accent; }
+
+listview {
+    columns:      5;
+    lines:        2;
+    spacing:      15px;
+}
+
+element {
+    orientation:      vertical;
+    padding:          15px;
+    border-radius:    10px;
+}
+
+element selected {
+    background-color: @accent;
+    text-color:       @bg;
+}
+
+element-icon { size: 48px; horizontal-align: 0.5; }
+element-text { horizontal-align: 0.5; font: "sans-serif 9"; }
+
+element-text selected { text-color: @bg; }
