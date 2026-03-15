@@ -3,6 +3,11 @@ spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 spawn-at-startup "awww-daemon"
 spawn-at-startup "bash" "-c" "sleep 1 && qs -p ~/dotfiles/quickshell/bar"
 spawn-at-startup "swww-daemon"
+spawn-at-startup "/usr/lib/xdg-desktop-portal"
+spawn-at-startup "sh" "-c" "sleep 1"
+spawn-at-startup "/usr/libexec/xdg-desktop-portal-gnome"
+spawn-at-startup "/usr/libexec/xdg-desktop-portal-gtk"
+spawn-at-startup "/usr/libexec/xdg-desktop-portal-wlr"
 spawn-at-startup "~/.config/niri/script/wallpaper_carousel.sh"
 spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/media-player"
 spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/user-menu"
@@ -408,6 +413,10 @@ window-rule {
 }
 
 environment {
+    DISPLAY ":0"
+    XDG_CURRENT_DESKTOP "niri"
+    XDG_SESSION_TYPE "wayland"
+    WAYLAND_DISPLAY "wayland-1"
     LIBVA_DRIVER_NAME "nvidia"
     WLR_NO_HARDWARE_CURSORS "1"
     __GLX_VENDOR_LIBRARY_NAME "nvidia"
