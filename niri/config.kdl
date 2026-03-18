@@ -1,47 +1,42 @@
 // Startup Applications
-spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &"
-spawn-at-startup "awww-daemon"
-spawn-at-startup "bash" "-c" "sleep 1 && qs -p ~/dotfiles/quickshell/bar"
+spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP=niri"
+spawn-at-startup "systemctl" "--user" "restart" "xdg-desktop-portal"
 spawn-at-startup "swww-daemon"
-spawn-at-startup "/usr/lib/xdg-desktop-portal"
-spawn-at-startup "sh" "-c" "sleep 1"
-spawn-at-startup "/usr/libexec/xdg-desktop-portal-gnome"
-spawn-at-startup "/usr/libexec/xdg-desktop-portal-gtk"
-spawn-at-startup "/usr/libexec/xdg-desktop-portal-wlr"
+spawn-at-startup "awww-daemon"
+spawn-at-startup "xwayland-satellite"
+spawn-at-startup "bash" "-c" "sleep 1 && qs -p ~/dotfiles/quickshell/bar"
 spawn-at-startup "~/.config/niri/script/wallpaper_carousel.sh"
 spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/media-player"
 spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/user-menu"
-spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/dotfiles/quickshell/waifu-widget"
-spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/dotfiles/quickshell/desktop-clock"
-spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/dotfiles/quickshell/control-center"
-spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/dotfiles/quickshell/network-dashboard"
-spawn-at-startup "bash" "/home/alterra/dotfiles/niri/script/start-visualizer.sh"
-spawn-at-startup "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=niri"
-spawn-at-startup "xwayland-satellite"
-spawn-at-startup "Xwayland" ":1"
+spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/waifu-widget"
+spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/desktop-clock"
+spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/control-center"
+spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/network-dashboard"
+spawn-at-startup "bash" "~/.config/niri/script/start-visualizer.sh"
+
+// 4. Apps au démarrage
 spawn-at-startup "bash" "-c" "sleep 5 && gtk-launch com.discordapp.Discord"
 include "colors.kdl"
 // General Settings
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png"
 prefer-no-csd
-// Dell screen
-output "DP-1" {
-    mode "1920x1200@59.950"
-    transform "90"
-    position x=-1200 y=-610
-}
-
 // Lenovo screen
 output "DP-2" {
-    mode "1920x1080@143.847"
+    mode "1920x1080@144"
     position x=0 y=0
     background-color "#1e1e2e"
+}
+// Dell screen
+output "DP-1" {
+    mode "1920x1200@60"
+    transform "90"
+    position x=-1200 y=-330
 }
 
 // Philips screen
 output "HDMI-A-1" {
-    mode "1440x900@59.887"
-    position x=1920 y=150
+    mode "1440x900@60"
+    position x=1920 y=50
 }
 
 // TV (Disable)
