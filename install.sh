@@ -24,7 +24,7 @@ if [ ! -d "$HOME/dotfiles" ]; then
     git clone https://github.com/Kanjurito/dotfiles.git "$HOME/dotfiles"
 fi
 mkdir -p ~/.config
-cp -rv "$HOME/dotfiles"/{cava,eww,fastfetch,kitty,niri,quickshell,wallust,waybar} ~/.config/
+cp -rv "$HOME/dotfiles"/{cava,eww,fastfetch,kitty,niri,quickshell,wallust} ~/.config/
 
 echo "greetd configuration..."
 sudo mkdir -p /etc/greetd
