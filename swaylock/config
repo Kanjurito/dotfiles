@@ -1,0 +1,64 @@
+# swaylock-effects — ~/dotfiles/swaylock/config
+
+# Screenshot du bureau + effets
+screenshots
+effect-blur=9x5
+effect-vignette=0.5:0.5
+fade-in=0.15
+
+# Comportement
+ignore-empty-password
+show-failed-attempts
+daemonize
+
+# Avatar centré (cercle via indicator)
+# L'image pp.png est dans ~/dotfiles/swaylock/img/
+# swaylock-effects ne gère pas d'avatar custom directement,
+# on utilise l'indicator avec nos couleurs
+
+# Indicator (password ring)
+indicator-radius=55
+indicator-thickness=5
+
+# Clock
+clock
+timestr=%H:%M
+datestr=%A %d %B
+
+# Font
+font=JetBrainsMono Nerd Font
+font-size=20
+time-font=JetBrainsMono Nerd Font
+date-font=JetBrainsMono Nerd Font
+time-size=80
+date-size=18
+
+# Couleurs Catppuccin Mocha
+inside-color=1e1e2ecc
+inside-clear-color=1e1e2ecc
+inside-caps-lock-color=1e1e2ecc
+inside-ver-color=1e1e2ecc
+inside-wrong-color=1e1e2ecc
+
+ring-color=cba6f7aa
+ring-clear-color=a6e3a1ff
+ring-ver-color=89b4faff
+ring-wrong-color=f38ba8ff
+
+line-color=00000000
+line-clear-color=00000000
+line-ver-color=00000000
+line-wrong-color=00000000
+
+key-hl-color=cba6f7ff
+bs-hl-color=f38ba8ff
+
+separator-color=00000000
+
+text-color=cdd6f4ff
+text-clear-color=a6e3a1ff
+text-ver-color=89b4faff
+text-wrong-color=f38ba8ff
+
+time-color=cdd6f4ff
+date-color=9399b2ff

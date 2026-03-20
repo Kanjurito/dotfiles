@@ -85,6 +85,7 @@ binds {
     MOD+SHIFT+E { quit; }
     Mod+Shift+Y { spawn "eww" "-c" "/home/alterra/.config/eww/powermenu/" "open" "--toggle" "powermenu"; }
     MOD+SHIFT+ESCAPE { show-hotkey-overlay; }
+    MOD+L { spawn "bash" "-c" "$HOME/dotfiles/swaylock/lock.sh"; }
 
 
     MOD+A { spawn "rofi" "-show" "drun"; }
@@ -111,10 +112,10 @@ binds {
     MOD+Q                               { close-window; }
     CTRL+ALT+Q				{ close-window; }
 
-    MOD+H                               { focus-column-left; }
-    MOD+J                               { focus-workspace-down; }
-    MOD+K                               { focus-workspace-up; }
-    MOD+L                               { focus-column-right; }
+    MOD+G                               { focus-column-left; }
+    MOD+H                               { focus-workspace-down; }
+    MOD+J                               { focus-workspace-up; }
+    MOD+K                               { focus-column-right; }
 
     MOD+CTRL+LEFT                            { focus-column-left; }
     MOD+CTRL+DOWN                            { focus-window-down; }
