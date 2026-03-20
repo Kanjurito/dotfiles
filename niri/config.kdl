@@ -90,7 +90,7 @@ binds {
 
     MOD+A { spawn "rofi" "-show" "drun"; }
     MOD+B { spawn "firefox"; }
-    MOD+E { spawn "nautilus"; }
+    MOD+E { spawn "nemo"; }
     MOD+SHIFT+D { spawn "env" "DISPLAY=:0" "discord" "--disable-gpu-sandbox"; }
     MOD+W { spawn "/home/alterra/.config/niri/script/wallpaper_carousel.sh"; }
     MOD+SHIFT+W { spawn "quickshell" "-p" "~/dotfiles/quickshell/waifu-widget";}
