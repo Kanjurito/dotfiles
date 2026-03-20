@@ -2,9 +2,9 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-packages=(niri fuzzel xdg-desktop-portal-gtk xdg-desktop-portal-gnome kitty xwayland-satellite fastfetch cava rofi ttf-jetbrains-mono-nerd quickshell nautilus greetd greetd-tuigreet)
+packages=(niri fuzzel xdg-desktop-portal-gtk xdg-desktop-portal-gnome kitty xwayland-satellite fastfetch cava rofi ttf-jetbrains-mono-nerd quickshell nemo greetd greetd-tuigreet)
 
-pkgyay=(eww swww wallust wlr-randr)
+pkgyay=(eww swww wallust wlr-randr hyprlock)
 
 sudo pacman -Syu --noconfirm
 sudo pacman -S --needed base-devel git --noconfirm
