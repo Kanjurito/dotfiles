@@ -13,3 +13,64 @@
 「 discipline equals freedom 」
 「 in the middle of chaos lies opportunity 」
 「 know thyself 」
+「focus is a matter of deciding what things you're not going to do 」
+「 perfection is achieved not when there is nothing more to add, but when there is nothing left to take away 」
+「 move fast and break nothing (but the status quo) 」
+「 deep work is the superpower of the 21st century 」
+「 we suffer more often in imagination than in reality 」
+「 what stands in the way becomes the way 」
+「 you have power over your mind, not outside events 」
+「 character is fate 」
+「 show, don't tell 」
+「 action is the antidote to despair 」
+「 first, do it. then, do it right. then, do it better 」
+「 don't mistake movement for achievement 」
+「 code never lies, comments sometimes do 」
+「 the limits of my language mean the limits of my world 」
+「 logic is the beginning of wisdom, not the end 」
+「 stay hungry, stay foolish 」
+「 i use arch btw 」
+「 if it's not broken, tweak it until it is 」
+「 simplicity is the absence of unnecessary parts 」
+「 keep it simple, stupid 」
+「 read the manual, then read it again 」
+「 RTFM: it’s the only way to the truth 」
+「 there is no place like ~ 」
+「 bleeding edge: where the blood is usually yours 」
+「 in a world without walls, who needs windows? 」
+「 tux is watching your productivity 」
+「 compile time is coffee time 」
+「 arch linux: finishing the install is the game 」
+「 with great power comes great responsibility, or just sudo rm -rf / 」
+「 automate the boring stuff, break the fun stuff 」
+「 your desktop is a reflection of your mind: clean, dark, and tiling 」
+「 terminal is my home, bash is my language 」
+「 configuration is a never-ending journey 」
+「 real men don't use backups, they upload to git and pray 」
+「 my window manager is tiling, my thoughts are not 」
+「 :wq is the only exit strategy 」
+「 ~ sweet ~ 」
+「 stable is for horses, rolling release is for legends 」
+「 with sudo, comes the power 」
+「 build less, build better 」
+「 premature optimization is the root of all evil 」
+「 make it work, make it right, make it fast 」
+「 fix the cause, not the symptom 」
+「 if you can’t explain it simply, you don’t understand it well enough 」
+「 everything is a file 」
+「 dotfiles are a personality trait 」
+「 rice > performance (but why not both) 」
+「 there is no undo in real life 」
+「 backups are cheaper than regret 」
+「 trust, but verify 」
+「 reality is the ultimate debugger 」
+「 windows is just a gui for downloading linux 」
+「 i don’t click “next”, i read docs 」
+「 your os shouldn’t spy on you (windows be like) 」
+「 telemetry is not a feature 」
+「 windows hides problems, linux shows them 」
+「 windows users debug by rebooting,linux users debug by understanding 」
+「 i know what runs on my machine 」
+「 ads in an operating system is crazy 」
+「 powered by penguin, not by excuses 」
+「 cope harder, compile faster 」
