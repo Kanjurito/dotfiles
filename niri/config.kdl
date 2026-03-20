@@ -14,7 +14,6 @@ spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/control-cent
 spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/network-dashboard"
 spawn-at-startup "bash" "~/.config/niri/script/start-visualizer.sh"
 
-// 4. Apps au démarrage
 spawn-at-startup "bash" "-c" "sleep 5 && gtk-launch com.discordapp.Discord"
 include "colors.kdl"
 // General Settings
