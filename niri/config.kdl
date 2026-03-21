@@ -306,6 +306,7 @@ window-rule {
     match app-id=r#"firefox"#
     match app-id=r#"google-chrome"#
     match app-id=r#"code"#
+    match app-id=r#"nemo"#
     match app-id=r#"obsidian$"#
     open-maximized true
 }
