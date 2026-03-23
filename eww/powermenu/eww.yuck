@@ -2,7 +2,6 @@
   (eventbox :onclick "eww -c ~/.config/eww/powermenu/ close powermenu"
             :onkeypress "if [ {} -eq 9 ]; then eww -c ~/.config/eww/powermenu/ close powermenu; fi"
     (box :class "powermenu-overlay"
-      ;; La boîte du menu réel, on utilise :halign et :valign pour la centrer
       (box :class "powermenu-bg"
            :orientation "h"
            :space-evenly true
