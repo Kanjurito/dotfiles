@@ -145,7 +145,7 @@ A complete overview of all custom keybindings used in this Niri setup.
 | **MOD + Shift + M** | Toggle media-player widget     |
 | **MOD + Shift + U** | Toggle user-menu widget        |
 | **MOD + P**         | Launch Hyprpicker              |
-
+| **MOD + L**         | Launch Hyprlock (lock screen)  |
 ---
 
 ### 🔊 Media & Brightness
