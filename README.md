@@ -137,7 +137,7 @@ A complete overview of all custom keybindings used in this Niri setup.
 | ------------------- | ------------------------------ |
 | **MOD + A**         | Launch Rofi (drun)             |
 | **MOD + B**         | Launch Firefox                 |
-| **MOD + E**         | Launch Nautilus                |
+| **MOD + E**         | Launch Nemo                    |
 | **MOD + Shift + D** | Launch Discord (XWayland)      |
 | **MOD + W**         | Run wallpaper carousel script  |
 | **MOD + Shift + W** | Launch Quickshell waifu widget |
