@@ -8,20 +8,24 @@ PanelWindow {
 
     required property var modelData
 
+    // --- WAYLAND LAYER SHELL CONFIG ---
     WlrLayershell.screen: root.modelData
-    WlrLayershell.layer: WlrLayer.Bottom
-    WlrLayershell.exclusionMode: ExclusionMode.Ignore
+    WlrLayershell.layer: WlrLayer.Bottom            // Stay behind windows
+    WlrLayershell.exclusionMode: ExclusionMode.Ignore // Don't push windows away
     WlrLayershell.keyboardFocus: WlrKeyboardFocus.None
 
     anchors { bottom: true; left: true; right: true }
     implicitHeight: 120
     color: "transparent"
 
+    // Visualizer settings
     property int barCount: 48
     property var barValues: Array(48).fill(0)
+    // Default colors (will be overwritten by Wallust)
     property color c0: "#4895A5"
     property color c1: "#AD6581"
 
+    // Function to parse Wallust color sequences
     function parseSequences(data) {
         try {
             var colors = {}
@@ -34,8 +38,9 @@ PanelWindow {
         } catch(e) {}
     }
 
+    // Initial load of Wallust colors
     Process {
-        command: ["cat", "/home/alterra/.cache/wallust/sequences"]
+        command: ["cat", os.home + "/.cache/wallust/sequences"]
         running: true
         stdout: SplitParser {
             splitMarker: ""
@@ -43,19 +48,21 @@ PanelWindow {
         }
     }
 
+    // Watch for wallpaper/color changes using inotify
     Process {
         id: watcher
         command: ["inotifywait", "-m", "-e", "close_write",
-                  "/home/alterra/.cache/wallust/sequences"]
+                  os.home + "/.cache/wallust/sequences"]
         running: true
         stdout: SplitParser {
             onRead: _ => { reloader.running = false; reloader.running = true }
         }
     }
 
+    // Reload colors when the file is modified
     Process {
         id: reloader
-        command: ["cat", "/home/alterra/.cache/wallust/sequences"]
+        command: ["cat", os.home + "/.cache/wallust/sequences"]
         running: false
         stdout: SplitParser {
             splitMarker: ""
@@ -63,9 +70,10 @@ PanelWindow {
         }
     }
 
+    // Bridge to read CAVA raw data from the FIFO pipe via Python
     Process {
         id: cavaReader
-        command: ["python3", "/home/alterra/dotfiles/quickshell/AudioVisualizer/cava-reader.py",
+        command: ["python3", "/home/alterra/.config/quickshell/AudioVisualizer/cava-reader.py",
                   "/tmp/cava.fifo", "48"]
         running: true
         stdout: SplitParser {
@@ -80,6 +88,7 @@ PanelWindow {
         }
     }
 
+    // Restart mechanism if CAVA reader crashes
     Timer {
         interval: 2000
         repeat: false
@@ -94,6 +103,7 @@ PanelWindow {
         }
     }
 
+    // UI Rendering: Row of bars
     Row {
         id: barsRow
         anchors { left: parent.left; right: parent.right; bottom: parent.bottom }
@@ -105,9 +115,11 @@ PanelWindow {
             Rectangle {
                 required property int index
                 width:  (barsRow.width - (root.barCount - 1) * barsRow.spacing) / root.barCount
+                // Scale bar height based on CAVA value (0-255)
                 height: Math.max(2, (root.barValues[index] / 255.0) * barsRow.height)
                 anchors.bottom: parent.bottom
                 radius: 2
+                // Gradient color interpolation between root.c0 and root.c1
                 color: {
                     var t = index / (root.barCount - 1)
                     return Qt.rgba(
@@ -117,6 +129,7 @@ PanelWindow {
                         0.45 + (root.barValues[index] / 255.0) * 0.55
                     )
                 }
+                // Smooth animations for transitions
                 Behavior on height { NumberAnimation { duration: 90; easing.type: Easing.OutCubic } }
                 Behavior on color  { ColorAnimation  { duration: 800 } }
             }

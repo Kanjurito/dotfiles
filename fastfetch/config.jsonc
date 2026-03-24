@@ -7,116 +7,135 @@
 //  |_| \__,_|___/\__|_| \___|\__\___|_| |_|
 //
 
+//  Fastfetch configuration file
+//  Customized for a clean, framed system information display
+
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
   "logo": {
-    "color": {"1": "blue", "2": "black"},
+    "color": { "1": "blue", "2": "black" },
+    /* Automatically picks a random PNG from the fastfetch/png folder */
     "source": "$(find \"${XDG_CONFIG_HOME:-$HOME/.config}/fastfetch/png/\" -name \"*.png\" | shuf -n 1)",
     "padding": {
       "top": 4,
-      "right": 5
+      "right": 5,
     },
-    "height": 18
+    "height": 18,
   },
+
   "display": {
-    "separator": " ▸ " // :
+    "separator": " ▸ ",
   },
-    "modules": [
-        {
-            "type": "custom",
-            "format": "{#31}------------------>Kanjurito<------------------"
-        },
-        {
-            "type": "custom",
-            "format": "{#37}╔══════════════════════════════════════════════════╗"
-        },
-        {
-            "type": "player",
-            "key": "{#35}╭─ Song"
-        },
-        {
-            "type": "localip",
-            "key": "{#35}╰─ Local IP",
-            "showIpv6": false
-        },
-        "break",
-        {
-            "type": "os",
-            "key": "{#32} ╭─",
-            "format": "{3} {12}" 
-        },
-        {
-            "type": "kernel",
-            "key": "{#32} ├─"
-        },
-        {
-            "type": "packages",
-            "key": "{#32} ├─"
-        },
-	{
-    	"type": "uptime",
-    	"key": "{#32} ├─"
-	},
-        {
-            "type": "shell",
-            "key": "{#32} ╰─"
-        },
-        "break",
-        {
-            "type": "host",
-            "key": "{#34} ╭─"
-        },
-        {
-            "type": "cpu",
-            "key": "{#34} ├─",
-            "temp": true
-        },
-	{
-    		"type": "gpu",
-    		"key": "{#34} ├─",
-    		"temp": true
-	},
-        {
-            "type": "memory",
-            "key": "{#34} ├─",
-            "format": "{} / {}" 
-        },
-        {
-            "type": "disk",
-            "key": "{#34} ├─",
-            "format": "{} / {}" 
-        },
-{
-    "type": "loadavg",
-    "key": "{#34} ╰─󰓅"
-},
-        "break",
-        {
-            "type": "wm",
-            "key": "{#33} ╭─"
-        },
-        {
-            "type": "terminal",
-            "key": "{#33} ├─"
-        },
-        {
-            "type": "theme",
-            "key": "{#33} ╰─"
-        },
-        {
-            "type": "custom",
-            "format": "{#37}╚════════════════════════🟕═════════════════════════╝"
-        },
-{
-            "type": "custom",
-            "format": "{#31}--------------------------------------------------"
-        },        "break",
-        {
-            "type": "colors",
-            "symbol": "square",
-            "block": {
-                "range": [1, 8]
-            }
-        }
-    ]
+
+  "modules": [
+    /* Header with custom nickname */
+    {
+      "type": "custom",
+      "format": "{#31}------------------>Kanjurito<------------------",
+    },
+    {
+      "type": "custom",
+      "format": "{#37}╔══════════════════════════════════════════════════╗",
+    },
+
+    /* Media and Network info */
+    {
+      "type": "player",
+      "key": "{#35}╭─ Song",
+    },
+    {
+      "type": "localip",
+      "key": "{#35}╰─ Local IP",
+      "showIpv6": false,
+    },
+    "break",
+
+    /* System & OS Info */
+    {
+      "type": "os",
+      "key": "{#32} ╭─",
+      "format": "{3} {12}",
+    },
+    {
+      "type": "kernel",
+      "key": "{#32} ├─",
+    },
+    {
+      "type": "packages",
+      "key": "{#32} ├─",
+    },
+    {
+      "type": "uptime",
+      "key": "{#32} ├─",
+    },
+    {
+      "type": "shell",
+      "key": "{#32} ╰─",
+    },
+    "break",
+
+    /* Hardware & Performance */
+    {
+      "type": "host",
+      "key": "{#34} ╭─",
+    },
+    {
+      "type": "cpu",
+      "key": "{#34} ├─",
+      "temp": true,
+    },
+    {
+      "type": "gpu",
+      "key": "{#34} ├─",
+      "temp": true,
+    },
+    {
+      "type": "memory",
+      "key": "{#34} ├─",
+      "format": "{} / {}",
+    },
+    {
+      "type": "disk",
+      "key": "{#34} ├─",
+      "format": "{} / {}",
+    },
+    {
+      "type": "loadavg",
+      "key": "{#34} ╰─󰓅",
+    },
+    "break",
+
+    /* Desktop Environment info */
+    {
+      "type": "wm",
+      "key": "{#33} ╭─",
+    },
+    {
+      "type": "terminal",
+      "key": "{#33} ├─",
+    },
+    {
+      "type": "theme",
+      "key": "{#33} ╰─",
+    },
+
+    /* Footer & Color Palette */
+    {
+      "type": "custom",
+      "format": "{#37}╚════════════════════════🟕═════════════════════════╝",
+    },
+    {
+      "type": "custom",
+      "format": "{#31}--------------------------------------------------",
+    },
+    "break",
+    {
+      "type": "colors",
+      "symbol": "square",
+      "block": {
+        "range": [1, 8],
+      },
+    },
+  ],
 }

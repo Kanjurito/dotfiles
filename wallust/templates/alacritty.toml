@@ -1,4 +1,3 @@
-# UNIQUEMENT les couleurs de texte (normal et bright)
 [colors.normal]
 black =   "{{color0}}"
 red =     "{{color1}}"
