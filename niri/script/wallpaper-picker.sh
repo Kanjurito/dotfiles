@@ -83,7 +83,7 @@ CHOSEN=$(printf "%b" "$ROFI_INPUT" | rofi \
 SELECTED_FILE="${FILES[$CHOSEN]}"
 [[ -z "$SELECTED_FILE" ]] && exit 0
 
-# ── 5. Apply the chosen wallpaper (same logic as your script) ─
+# ── 5. Apply the chosen wallpaper ─
 EXT="${SELECTED_FILE##*.}"
 EXT=$(echo "$EXT" | tr '[:upper:]' '[:lower:]')
 
