@@ -93,6 +93,7 @@ binds {
     MOD+E { spawn "nemo"; }
     MOD+SHIFT+D { spawn "env" "DISPLAY=:0" "discord" "--disable-gpu-sandbox"; }
     MOD+W { spawn "/home/alterra/.config/niri/script/wallpaper_carousel.sh"; }
+    MOD+Z { spawn "~/.config/niri/script/wallpaper-picker.sh"; }
     MOD+SHIFT+W { spawn "quickshell" "-p" "~/dotfiles/quickshell/waifu-widget";}
     CTRL+SHIFT+T { spawn "kitty"; }
 

@@ -139,13 +139,14 @@ A complete overview of all custom keybindings used in this Niri setup.
 | **MOD + B**         | Launch Firefox                 |
 | **MOD + E**         | Launch Nemo                    |
 | **MOD + Shift + D** | Launch Discord (XWayland)      |
-| **MOD + W**         | Run wallpaper carousel script  |
+| **MOD + W**         | Change Wallpaper               |
 | **MOD + Shift + W** | Launch Quickshell waifu widget |
 | **MOD + Shift + R** | Restart Quickshell widgets     |
 | **MOD + Shift + M** | Toggle media-player widget     |
 | **MOD + Shift + U** | Toggle user-menu widget        |
 | **MOD + P**         | Launch Hyprpicker              |
 | **MOD + L**         | Launch Hyprlock (lock screen)  |
+| **MOD + Z**         | Launch Wallpaper-picker Script |
 ---
 
 ### 🔊 Media & Brightness
