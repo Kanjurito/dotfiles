@@ -1,16 +1,24 @@
 * {
+    bg-col:      #1e1e2eE6;
+    bg-col-dark: #11111bB3;
+    bg-col-light: #31324480;
+
+    border-col:  #cba6f7;
+    magenta:     #f5c2e7;
+    text-col:    #cdd6f4;
+
     background-color: transparent;
-    text-color:       #e8eaf6;
-    font:             "JetBrains Mono 11";
+    text-color:       @text-col;
+    font:             "JetBrains Mono NF 11";
 }
 
 window {
-    width:            92%;
-    height:           88%;
-    background-color: #1a2035;
-    border:           2px solid;
-    border-color:     #2e3f60;
-    border-radius:    14px;
+    width:            90%;
+    height:           85%;
+    background-color: @bg-col;
+    border:           3px solid;
+    border-color:     @border-col;
+    border-radius:    24px;
     padding:          0px;
 }
 
@@ -21,101 +29,62 @@ mainbox {
 }
 
 inputbar {
-    background-color: #212d45;
-    border:           0px 0px 2px 0px;
-    border-color:     #2e3f60;
-    border-radius:    14px 14px 0px 0px;
-    padding:          14px 20px 14px 20px;
-    spacing:          12px;
+    background-color: @bg-col-dark;
+    border:           0px 0px 3px 0px;
+    border-color:     @magenta;
+    border-radius:    21px 21px 0px 0px;
+    padding:          25px;
+    spacing:          15px;
     children:         [ prompt, entry ];
 }
 
 prompt {
-    background-color: #5b8dd9;
-    text-color:       #1a2035;
-    padding:          4px 14px 4px 14px;
-    border-radius:    6px;
+    background-color: @magenta;
+    text-color:       #11111b;
+    padding:          8px 20px;
+    border-radius:    12px;
     font:             "JetBrains Mono Bold 11";
-    vertical-align:   0.5;
 }
 
 entry {
-    background-color:  transparent;
-    text-color:        #e8eaf6;
-    placeholder:       "Search wallpapers...";
-    placeholder-color: #8899bb;
-    vertical-align:    0.5;
+    placeholder:      "󰍉 Search Wallpaper";
+    placeholder-color: #6c7086;
+    vertical-align:   0.5;
 }
 
 listview {
-    background-color: transparent;
-    padding:          18px 18px 18px 18px;
-    spacing:          14px;
+    padding:          25px;
+    spacing:          20px;
     columns:          4;
-    lines:            99;
-    scrollbar:        true;
-    fixed-height:     false;
-    layout:           vertical;
-}
-
-scrollbar {
-    background-color: #263350;
-    handle-color:     #5b8dd9;
-    handle-width:     5px;
-    border-radius:    4px;
-    width:            6px;
+    lines:            10;
+    scrollbar:        false;
 }
 
 element {
-    background-color: #263350;
-    border-radius:    10px;
-    padding:          6px 6px 10px 6px;
-    spacing:          0px;
+    background-color: @bg-col-light;
+    border-radius:    16px;
+    padding:          15px;
     orientation:      vertical;
     border:           1px solid;
-    border-color:     #2e3f60;
-}
-
-element normal.normal {
-    background-color: #263350;
-    text-color:       #8899bb;
+    border-color:     #45475a80;
 }
 
 element selected.normal {
-    background-color: #2e4880;
-    text-color:       #e8eaf6;
-    border-color:     #5b8dd9;
-}
-
-element alternate.normal {
-    background-color: #263350;
-    text-color:       #8899bb;
-}
-
-element normal.urgent {
-    background-color: #263350;
-    text-color:       #e06c75;
-    border-color:     #e06c75;
-}
-
-element selected.urgent {
-    background-color: #2e4880;
-    text-color:       #e06c75;
-    border-color:     #e06c75;
+    background-color: #45475aB3;
+    text-color:       @magenta;
+    border:           2px solid;
+    border-color:     @magenta;
 }
 
 element-icon {
-    background-color: #0d1525;
     size:             160px;
-    border-radius:    7px 7px 0px 0px;
     horizontal-align: 0.5;
-    vertical-align:   0.5;
+    background-color: transparent;
 }
 
 element-text {
-    background-color: transparent;
-    text-color:       #8899bb;
-    font:             "JetBrains Mono 9";
+    text-color:       inherit;
+    font:             "JetBrains Mono Medium 10";
     horizontal-align: 0.5;
-    vertical-align:   0.5;
+    padding:          10px 0px 0px 0px;
 }
