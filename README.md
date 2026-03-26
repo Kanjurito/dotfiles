@@ -64,7 +64,8 @@ And :
 
 ````bash
 
-niri/scripts/wallpaper-picker.sh ```
+niri/scripts/wallpaper-picker.sh
+```
 
 You must edit the following variable:
 
