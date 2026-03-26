@@ -7,15 +7,16 @@ This repository contains everything needed to reproduce my lightweight, fast, an
 
 ## 📸 Screenshots
 
-| Fastfetch & Terminal | Rofi Custom Theme |
-| :---: | :---: |
+|               Fastfetch & Terminal                |               Rofi Custom Theme               |
+| :-----------------------------------------------: | :-------------------------------------------: |
 | <img src="screenshots/fastfetch.png" width="400"> | <img src="screenshots/rofi.webp" width="400"> |
 
-| Eww Powermenu | Dashboard |
-| :---: | :---: |
+|                     Eww Powermenu                     |                     Dashboard                     |
+| :---------------------------------------------------: | :-----------------------------------------------: |
 | <img src="screenshots/eww_powermenu.png" width="400"> | <img src="screenshots/dashboard.png" width="400"> |
 
 ### 🎵 Music & QuickShell Widgets
+
 <img src="screenshots/widgets.png" width="100%" alt="Music and Waifu widgets">
 
 ---
@@ -59,12 +60,18 @@ Inside:
 niri/scripts/wallpaper_carrousel
 ```
 
+And :
+
+````bash
+
+niri/scripts/wallpaper-picker.sh ```
+
 You must edit the following variable:
 
 ```bash
 
 WALLPAPER_DIR="~/images/wallpaper"
-```
+````
 
 ➡️ Replace it with your own wallpaper directory, otherwise the script will not find any images.
 
@@ -147,6 +154,7 @@ A complete overview of all custom keybindings used in this Niri setup.
 | **MOD + P**         | Launch Hyprpicker              |
 | **MOD + L**         | Launch Hyprlock (lock screen)  |
 | **MOD + Z**         | Launch Wallpaper-picker Script |
+
 ---
 
 ### 🔊 Media & Brightness

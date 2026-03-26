@@ -1,75 +1,75 @@
 #!/bin/bash
-# ============================================================
-#  wallpaper-picker.sh
-#  Rofi-based wallpaper picker with thumbnail previews.
-#  Works alongside your auto-rotation script — just call this
-#  whenever you want to pick manually; rotation continues after.
-# ============================================================
-
-# --- CONFIGURATION ---
-WALLPAPER_DIR="/home/alterra/Images/wallpaper"
+WALLPAPER_DIR="~/Images/wallpaper"
 THUMB_DIR="$HOME/.cache/wallpaper-thumbs"
-THUMB_SIZE="400x225"   # 16:9 thumbnails
-ROFI_COLS=4            # columns in the grid
+INDEX_FILE="$THUMB_DIR/index.tsv"
+THUMB_SIZE="400x225"
 
 mkdir -p "$THUMB_DIR"
 
-# ── 1. Collect wallpaper files ────────────────────────────────
-mapfile -t FILES < <(find "$WALLPAPER_DIR" -type f \
-    \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png"  \
-       -o -iname "*.webp" -o -iname "*.gif"                 \
-       -o -iname "*.mp4"  -o -iname "*.mkv" -o -iname "*.webm" -o -iname "*.mov" \
-    \) | sort)
+# ── Rebuild index only if wallpaper dir is newer than index ──
+rebuild_index() {
+    local tmp="$INDEX_FILE.tmp"
+    : > "$tmp"
+    while IFS= read -r -d '' FILE; do
+        EXT="${FILE##*.}"
+        EXT="${EXT,,}"
+        HASH=$(printf '%s' "$FILE" | md5sum | cut -d' ' -f1)
+        THUMB="$THUMB_DIR/${HASH}.png"
+        printf '%s\t%s\t%s\n' "$FILE" "$THUMB" "$EXT" >> "$tmp"
+    done < <(find "$WALLPAPER_DIR" -type f \
+        \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \
+           -o -iname "*.webp" -o -iname "*.gif" \
+           -o -iname "*.mp4" -o -iname "*.mkv" \
+           -o -iname "*.webm" -o -iname "*.mov" \
+        \) -print0 | sort -z)
+    mv "$tmp" "$INDEX_FILE"
+}
 
-if [[ ${#FILES[@]} -eq 0 ]]; then
-    notify-send "Wallpaper Picker" "No wallpapers found in $WALLPAPER_DIR"
-    exit 1
+# Rebuild if index missing or wallpaper dir modified more recently
+if [[ ! -f "$INDEX_FILE" ]] || [[ "$WALLPAPER_DIR" -nt "$INDEX_FILE" ]]; then
+    rebuild_index
 fi
 
-# ── 2. Generate thumbnails (skip if already cached) ──────────
-for FILE in "${FILES[@]}"; do
-    HASH=$(echo "$FILE" | md5sum | cut -d' ' -f1)
-    THUMB="$THUMB_DIR/${HASH}.png"
-
-    if [[ ! -f "$THUMB" ]]; then
-        EXT="${FILE##*.}"
-        EXT=$(echo "$EXT" | tr '[:upper:]' '[:lower:]')
-
+# ── Generate missing thumbs in background ────────────────────
+generate_thumbs_bg() {
+    while IFS=$'\t' read -r FILE THUMB EXT; do
+        [[ -f "$THUMB" ]] && continue
         if [[ "$EXT" == "mp4" || "$EXT" == "mkv" || "$EXT" == "webm" || "$EXT" == "mov" ]]; then
-            # Extract frame at 5s for video files
-            ffmpeg -ss 5 -i "$FILE" -vframes 1 -vf "scale=${THUMB_SIZE}:force_original_aspect_ratio=increase,crop=${THUMB_SIZE}" \
+            ffmpeg -ss 5 -i "$FILE" -vframes 1 \
+                   -vf "scale=${THUMB_SIZE}:force_original_aspect_ratio=increase,crop=${THUMB_SIZE}" \
                    -y "$THUMB" &>/dev/null \
             || ffmpeg -i "$FILE" -vframes 1 -vf "scale=${THUMB_SIZE}" -y "$THUMB" &>/dev/null
-            # Overlay a small ▶ play badge on video thumbs
-            if [[ -f "$THUMB" ]]; then
-                convert "$THUMB" \
-                    -fill 'rgba(0,0,0,0.55)' -draw 'circle 32,32 32,16' \
-                    -fill white -font DejaVu-Sans -pointsize 22 \
-                    -gravity NorthWest -annotate +20+18 '▶' \
-                    "$THUMB" 2>/dev/null || true
-            fi
         else
             convert "$FILE" -thumbnail "${THUMB_SIZE}^" \
                     -gravity center -extent "$THUMB_SIZE" \
                     "$THUMB" &>/dev/null
         fi
-    fi
-done
+    done < "$INDEX_FILE"
+}
+generate_thumbs_bg &
+BG_PID=$!
 
-# ── 3. Build rofi input list  (label\0icon\x1fPATH) ──────────
+# ── Build rofi input instantly from index (no md5 recompute) ─
 ROFI_INPUT=""
-for FILE in "${FILES[@]}"; do
-    HASH=$(echo "$FILE" | md5sum | cut -d' ' -f1)
-    THUMB="$THUMB_DIR/${HASH}.png"
-    LABEL=$(basename "$FILE")
-    ROFI_INPUT+="${LABEL}\0icon\x1f${THUMB}\n"
+mapfile -t INDEXED < "$INDEX_FILE"
+
+if [[ ${#INDEXED[@]} -eq 0 ]]; then
+    notify-send "Wallpaper Picker" "No wallpapers found in $WALLPAPER_DIR"
+    kill $BG_PID 2>/dev/null
+    exit 1
+fi
+
+FILES=()
+for LINE in "${INDEXED[@]}"; do
+    IFS=$'\t' read -r FILE THUMB EXT <<< "$LINE"
+    FILES+=("$FILE")
+    ROFI_INPUT+=" \0icon\x1f${THUMB}\n"
 done
 
-# ── 4. Launch rofi ───────────────────────────────────────────
+# ── Launch rofi immediately ───────────────────────────────────
 CHOSEN=$(printf "%b" "$ROFI_INPUT" | rofi \
     -dmenu \
-    -p "  Wallpaper" \
-    -theme-str "$(cat "$HOME/.config/rofi/wallpaper-picker.rasi" 2>/dev/null || echo '')" \
+    -p "" \
     -theme ~/.config/rofi/wallpaper-picker.rasi \
     -show-icons \
     -no-fixed-num-lines \
@@ -77,15 +77,15 @@ CHOSEN=$(printf "%b" "$ROFI_INPUT" | rofi \
     -format i \
     2>/dev/null)
 
-# rofi returns the 0-based index with -format i
-[[ -z "$CHOSEN" ]] && exit 0
+kill $BG_PID 2>/dev/null
+wait $BG_PID 2>/dev/null
 
+[[ -z "$CHOSEN" ]] && exit 0
 SELECTED_FILE="${FILES[$CHOSEN]}"
 [[ -z "$SELECTED_FILE" ]] && exit 0
 
-# ── 5. Apply the chosen wallpaper ─
 EXT="${SELECTED_FILE##*.}"
-EXT=$(echo "$EXT" | tr '[:upper:]' '[:lower:]')
+EXT="${EXT,,}"
 
 wallust run "$SELECTED_FILE"
 
@@ -97,4 +97,5 @@ else
     swww img "$SELECTED_FILE" --transition-type outer --transition-step 30
 fi
 
-notify-send "Wallpaper set" "$(basename "$SELECTED_FILE")" --icon "$HOME/.cache/wallpaper-thumbs/$(echo "$SELECTED_FILE" | md5sum | cut -d' ' -f1).png"
+HASH=$(printf '%s' "$SELECTED_FILE" | md5sum | cut -d' ' -f1)
+notify-send "Wallpaper" "$(basename "$SELECTED_FILE")" --icon "$THUMB_DIR/${HASH}.png"

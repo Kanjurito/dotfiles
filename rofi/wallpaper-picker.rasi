@@ -1,24 +1,15 @@
 * {
-    bg-col:      #1e1e2eE6;
-    bg-col-dark: #11111bB3;
-    bg-col-light: #31324480;
-
-    border-col:  #cba6f7;
-    magenta:     #f5c2e7;
-    text-col:    #cdd6f4;
-
     background-color: transparent;
-    text-color:       @text-col;
-    font:             "JetBrains Mono NF 11";
+    text-color:       transparent;
+    font:             "JetBrains Mono 1";
 }
 
 window {
-    width:            90%;
-    height:           85%;
-    background-color: @bg-col;
-    border:           3px solid;
-    border-color:     @border-col;
-    border-radius:    24px;
+    width:            96%;
+    height:           94%;
+    background-color: transparent;
+    border:           0px;
+    border-radius:    0px;
     padding:          0px;
 }
 
@@ -29,62 +20,86 @@ mainbox {
 }
 
 inputbar {
-    background-color: @bg-col-dark;
-    border:           0px 0px 3px 0px;
-    border-color:     @magenta;
-    border-radius:    21px 21px 0px 0px;
-    padding:          25px;
-    spacing:          15px;
-    children:         [ prompt, entry ];
-}
-
-prompt {
-    background-color: @magenta;
-    text-color:       #11111b;
-    padding:          8px 20px;
-    border-radius:    12px;
-    font:             "JetBrains Mono Bold 11";
+    background-color: transparent;
+    border:           0px;
+    padding:          6px 12px 6px 12px;
+    spacing:          6px;
+    children:         [ entry ];
 }
 
 entry {
-    placeholder:      "󰍉 Search Wallpaper";
-    placeholder-color: #6c7086;
-    vertical-align:   0.5;
+    background-color:  transparent;
+    text-color:        rgba(255,255,255,0.4);
+    placeholder:       "";
+    placeholder-color: transparent;
+    vertical-align:    0.5;
+    font:              "JetBrains Mono 10";
 }
 
 listview {
-    padding:          25px;
-    spacing:          20px;
-    columns:          4;
-    lines:            10;
+    background-color: transparent;
+    padding:          8px 8px 8px 8px;
+    spacing:          8px;
+    columns:          5;
+    lines:            99;
     scrollbar:        false;
+    fixed-height:     false;
+    layout:           vertical;
 }
 
 element {
-    background-color: @bg-col-light;
-    border-radius:    16px;
-    padding:          15px;
+    background-color: transparent;
+    border-radius:    10px;
+    padding:          0px;
+    spacing:          0px;
     orientation:      vertical;
-    border:           1px solid;
-    border-color:     #45475a80;
+    border:           3px solid;
+    border-color:     transparent;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color:       transparent;
+    border-color:     transparent;
 }
 
 element selected.normal {
-    background-color: #45475aB3;
-    text-color:       @magenta;
-    border:           2px solid;
-    border-color:     @magenta;
+    background-color: transparent;
+    text-color:       transparent;
+    border-color:     #4d9fff;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color:       transparent;
+    border-color:     transparent;
+}
+
+element normal.urgent {
+    background-color: transparent;
+    text-color:       transparent;
+    border-color:     transparent;
+}
+
+element selected.urgent {
+    background-color: transparent;
+    text-color:       transparent;
+    border-color:     #e06c75;
 }
 
 element-icon {
-    size:             160px;
-    horizontal-align: 0.5;
     background-color: transparent;
+    size:             220px;
+    border-radius:    8px;
+    horizontal-align: 0.5;
+    vertical-align:   0.5;
 }
 
 element-text {
-    text-color:       inherit;
-    font:             "JetBrains Mono Medium 10";
+    background-color: transparent;
+    text-color:       transparent;
+    font:             "JetBrains Mono 1";
     horizontal-align: 0.5;
-    padding:          10px 0px 0px 0px;
+    vertical-align:   0.5;
+    padding:          0px;
 }
