@@ -62,7 +62,7 @@ niri/scripts/wallpaper_carrousel
 
 And :
 
-````bash
+```bash
 
 niri/scripts/wallpaper-picker.sh
 ```
@@ -72,7 +72,7 @@ You must edit the following variable:
 ```bash
 
 WALLPAPER_DIR="~/images/wallpaper"
-````
+```
 
 ➡️ Replace it with your own wallpaper directory, otherwise the script will not find any images.
 
