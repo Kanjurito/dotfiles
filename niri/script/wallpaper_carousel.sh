@@ -30,7 +30,7 @@ while true; do
         pkill mpvpaper
 
         # Set static wallpaper with a smooth transition using swww
-        swww img "$FILE" --transition-type outer --transition-step 30
+        awww img "$FILE" --transition-type outer --transition-step 30
     fi
 
     # Wait before the next rotation

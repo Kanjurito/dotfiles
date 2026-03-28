@@ -14,7 +14,7 @@ packages=(
 )
 
 # AUR Packages (installed via yay)
-pkgyay=(eww swww wallust wlr-randr hyprlock mpvpaper)
+pkgyay=(eww awww wallust wlr-randr hyprlock mpvpaper blueberry)
 
 # --- SYSTEM UPDATE & BASE DEVEL ---
 echo "Updating system and installing base-devel..."

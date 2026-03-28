@@ -1,8 +1,10 @@
 // Startup Applications
 spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP=niri"
 spawn-at-startup "systemctl" "--user" "restart" "xdg-desktop-portal"
+spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "swww-daemon"
 spawn-at-startup "awww-daemon"
+spawn-at-startup "swaync"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "bash" "-c" "sleep 1 && qs -p ~/dotfiles/quickshell/bar"
 spawn-at-startup "~/.config/niri/script/wallpaper_carousel.sh"

@@ -2,7 +2,7 @@
 WALLPAPER_DIR="~/Images/wallpaper"
 THUMB_DIR="$HOME/.cache/wallpaper-thumbs"
 INDEX_FILE="$THUMB_DIR/index.tsv"
-THUMB_SIZE="400x225"
+THUMB_SIZE="800x450"
 
 mkdir -p "$THUMB_DIR"
 
@@ -94,7 +94,7 @@ if [[ "$EXT" == "mp4" || "$EXT" == "mkv" || "$EXT" == "webm" || "$EXT" == "mov" 
     mpvpaper -o "--loop-file=inf --no-audio --hwdec=auto --video-unscaled=no --panscan=1.0" "*" "$SELECTED_FILE" &
 else
     pkill mpvpaper 2>/dev/null
-    swww img "$SELECTED_FILE" --transition-type outer --transition-step 30
+    awww img "$SELECTED_FILE" --transition-type outer --transition-step 30
 fi
 
 HASH=$(printf '%s' "$SELECTED_FILE" | md5sum | cut -d' ' -f1)
