@@ -15,9 +15,9 @@ This repository contains everything needed to reproduce my lightweight, fast, an
 | :---------------------------------------------------: | :-----------------------------------------------: |
 | <img src="screenshots/eww_powermenu.png" width="400"> | <img src="screenshots/dashboard.png" width="400"> |
 
-### 🎵 Music & QuickShell Widgets
-
-<img src="screenshots/widgets.png" width="100%" alt="Music and Waifu widgets">
+|                Music & QuickShell Widgets             |                 Wallpaper Picker                  |
+| :---------------------------------------------------: | :-----------------------------------------------: |
+| <img src="screenshots/widgets.png" width="400">       | <img src="screenshots/picker.png" width="400">    |
 
 ---
 
