@@ -85,6 +85,7 @@ Example:
 
 WALLPAPER_DIR="$HOME/Pictures/Wallpapers"
 ```
+## Screen Configuration
 
 Edit your display variable :
 in my script :
@@ -115,8 +116,6 @@ output "HDMI-A-2" {
     off
 }
 ```
-
-## Screen Configuration 
 
 Replace with your screen configuration,for exemple :
 
