@@ -54,7 +54,7 @@ chmod +x install.sh
 ./install.sh
 ```
 
-🎨 Important: Wallpaper Carousel Configuration
+Important: Wallpaper Configuration
 
 Inside:
 
@@ -115,6 +115,8 @@ output "HDMI-A-2" {
     off
 }
 ```
+
+## Screen Configuration 
 
 Replace with your screen configuration,for exemple :
 
