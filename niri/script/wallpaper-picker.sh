@@ -1,12 +1,21 @@
 #!/bin/bash
-WALLPAPER_DIR="~/Images/wallpaper"
+WALLPAPER_DIR="/home/alterra/Images/wallpaper"
 THUMB_DIR="$HOME/.cache/wallpaper-thumbs"
 INDEX_FILE="$THUMB_DIR/index.tsv"
-THUMB_SIZE="800x450"
+THUMB_SIZE="400x225"
 
 mkdir -p "$THUMB_DIR"
 
-# ── Rebuild index only if wallpaper dir is newer than index ──
+# ── Count actual files on disk ────────────────────────────────
+count_files() {
+    find "$WALLPAPER_DIR" -type f \
+        \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \
+           -o -iname "*.webp" -o -iname "*.gif" \
+           -o -iname "*.mp4" -o -iname "*.mkv" \
+           -o -iname "*.webm" -o -iname "*.mov" \
+        \) | wc -l
+}
+
 rebuild_index() {
     local tmp="$INDEX_FILE.tmp"
     : > "$tmp"
@@ -25,8 +34,12 @@ rebuild_index() {
     mv "$tmp" "$INDEX_FILE"
 }
 
-# Rebuild if index missing or wallpaper dir modified more recently
-if [[ ! -f "$INDEX_FILE" ]] || [[ "$WALLPAPER_DIR" -nt "$INDEX_FILE" ]]; then
+# ── Rebuild if index missing or file count changed ────────────
+INDEX_COUNT=0
+[[ -f "$INDEX_FILE" ]] && INDEX_COUNT=$(wc -l < "$INDEX_FILE")
+DISK_COUNT=$(count_files)
+
+if [[ ! -f "$INDEX_FILE" ]] || [[ "$INDEX_COUNT" -ne "$DISK_COUNT" ]]; then
     rebuild_index
 fi
 
@@ -49,8 +62,7 @@ generate_thumbs_bg() {
 generate_thumbs_bg &
 BG_PID=$!
 
-# ── Build rofi input instantly from index (no md5 recompute) ─
-ROFI_INPUT=""
+# ── Build rofi input instantly from index ────────────────────
 mapfile -t INDEXED < "$INDEX_FILE"
 
 if [[ ${#INDEXED[@]} -eq 0 ]]; then
@@ -60,13 +72,14 @@ if [[ ${#INDEXED[@]} -eq 0 ]]; then
 fi
 
 FILES=()
+ROFI_INPUT=""
 for LINE in "${INDEXED[@]}"; do
     IFS=$'\t' read -r FILE THUMB EXT <<< "$LINE"
     FILES+=("$FILE")
     ROFI_INPUT+=" \0icon\x1f${THUMB}\n"
 done
 
-# ── Launch rofi immediately ───────────────────────────────────
+# ── Launch rofi ───────────────────────────────────────────────
 CHOSEN=$(printf "%b" "$ROFI_INPUT" | rofi \
     -dmenu \
     -p "" \

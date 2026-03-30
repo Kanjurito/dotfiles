@@ -14,7 +14,7 @@ spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/waifu-widget
 spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/desktop-clock"
 spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/control-center"
 spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/network-dashboard"
-spawn-at-startup "bash" "~/.config/niri/script/start-visualizer.sh"
+spawn-at-startup "bash" "-c" "sleep 5 && ~/.config/niri/script/start-visualizer.sh"
 
 spawn-at-startup "bash" "-c" "sleep 5 && gtk-launch com.discordapp.Discord"
 include "colors.kdl"
