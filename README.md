@@ -124,7 +124,9 @@ output "DP-2" {
     position x=0 y=0
 } //for a 1080p screen at 60Hz
 ```
+Outputs are matched by connector name (i.e. eDP-1, HDMI-A-1), or by monitor manufacturer, model, and serial, separated by a single space each. You can find all of these by running niri msg outputs.
 
+Usually, the built-in monitor in laptops will be called eDP-1.
 ---
 
 ## ⌨️ Keybindings
