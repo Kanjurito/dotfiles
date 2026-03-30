@@ -19,20 +19,23 @@ This repository contains everything needed to reproduce my lightweight, fast, an
 | :---------------------------------------------------: | :-----------------------------------------------: |
 | <img src="screenshots/widgets.png" width="400">       | <img src="screenshots/picker.png" width="400">    |
 
+|                     Hyprlock                          |                    Unix P*rn                      |
+| :---------------------------------------------------: | :-----------------------------------------------: |
+| <img src="screenshots/hyprlock.png" width="400">      | <img src="screenshots/unixporn.png" width="400">  |
 ---
 
 ## 📂 Repository Structure
 
-| Component                            | Description                                                 |
-| ------------------------------------ | ----------------------------------------------------------- |
-| **niri/**                            | Main WM configuration + scripts                             |
-| **niri/scripts/wallpaper_carrousel** | Automatic wallpaper rotation script                         |
-| **niri/scripts/wallpaper-picker**    | Wallpaper Selector Script                                   |
-| **fastfetch/**                       | Fastfetch configuration                                     |
-| **eww/**                             | Powermenu Widgets                                           |
-| **alacritty/**                       | Theme + keybinds                                            |
-| **quickshell/**                      | Media player,user menu,bar,control-center and waifu widgets |
-
+| Component                            | Description                                                     |
+| ------------------------------------ | --------------------------------------------------------------- |
+| **niri/**                            | Main WM configuration + scripts                                 |
+| **niri/scripts/wallpaper_carrousel** | Automatic wallpaper rotation script                             |
+| **niri/scripts/wallpaper-picker**    | Wallpaper Selector Script                                       |
+| **fastfetch/**                       | Fastfetch configuration                                         |
+| **eww/**                             | Powermenu Widgets                                               |
+| **alacritty/**                       | Theme + keybinds                                                |
+| **swaylock/**                        | Lock screen config                                              |
+| **quickshell/**                      | Media player,User Menu,Bar,Control-Center and Waifu Widgets     |
 ---
 
 ## ⚙️ Installation
