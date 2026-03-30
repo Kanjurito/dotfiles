@@ -23,15 +23,15 @@ This repository contains everything needed to reproduce my lightweight, fast, an
 
 ## 📂 Repository Structure
 
-| Component                            | Description                              |
-| ------------------------------------ | ---------------------------------------- |
-| **niri/**                            | Main WM configuration + scripts          |
-| **niri/scripts/wallpaper_carrousel** | Automatic wallpaper rotation script      |
-| **waybar/**                          | Custom Waybar configuration              |
-| **fastfetch/**                       | Fastfetch configuration                  |
-| **eww/**                             | Powermenu Widgets                        |
-| **alacritty/**                       | Theme + keybinds                         |
-| **quickshell/**                      | Media player,user menu and waifu widgets |
+| Component                            | Description                                                 |
+| ------------------------------------ | ----------------------------------------------------------- |
+| **niri/**                            | Main WM configuration + scripts                             |
+| **niri/scripts/wallpaper_carrousel** | Automatic wallpaper rotation script                         |
+| **niri/scripts/wallpaper-picker**    | Wallpaper Selector Script                                   |
+| **fastfetch/**                       | Fastfetch configuration                                     |
+| **eww/**                             | Powermenu Widgets                                           |
+| **alacritty/**                       | Theme + keybinds                                            |
+| **quickshell/**                      | Media player,user menu,bar,control-center and waifu widgets |
 
 ---
 
