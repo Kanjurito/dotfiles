@@ -158,7 +158,6 @@ A complete overview of all custom keybindings used in this Niri setup.
 | **MOD + E**         | Launch Nemo                    |
 | **MOD + Shift + D** | Launch Discord (XWayland)      |
 | **MOD + W**         | Change Wallpaper               |
-| **MOD + Z**         | Select Wallpaper               |
 | **MOD + Shift + W** | Launch Quickshell waifu widget |
 | **MOD + Shift + R** | Restart Quickshell widgets     |
 | **MOD + Shift + M** | Toggle media-player widget     |
