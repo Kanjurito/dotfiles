@@ -99,16 +99,16 @@ binds {
     CTRL+SHIFT+T { spawn "kitty"; }
 
     // Media Keys
-    XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "mediactl volume_up"; }
-    XF86AudioLowerVolume                allow-when-locked=true { spawn-sh "mediactl volume_down"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%+"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%-"; }
     XF86MonBrightnessUp   allow-when-locked=true { spawn "~/.config/niri/script/brightness.sh" "up"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "~/.config/niri/script/brightness.sh" "down"; }
-    XF86AudioMute                       allow-when-locked=true { spawn-sh "mediactl volume_mute"; }
-    XF86AudioMicMute                    allow-when-locked=true { spawn-sh "mediactl mic_mute"; }
-    XF86AudioNext                       allow-when-locked=true { spawn-sh "mediactl next_track"; }
-    XF86AudioPause                      allow-when-locked=true { spawn-sh "mediactl play_pause"; }
-    XF86AudioPlay                       allow-when-locked=true { spawn-sh "mediactl play_pausse"; }
-    XF86AudioPrev                       allow-when-locked=true { spawn-sh "mediactl prev_track"; }
+    XF86AudioMute                       allow-when-locked=true { spawn-sh "playerctl volume_mute"; }
+    XF86AudioMicMute                    allow-when-locked=true { spawn-sh "playerctl mic_mute"; }
+    XF86AudioNext                       allow-when-locked=true { spawn-sh "playerctl next_track"; }
+    XF86AudioPause                      allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+    XF86AudioPlay                       allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+    XF86AudioPrev                       allow-when-locked=true { spawn-sh "playerctl previous"; }
 
     // Window Management
     MOD+Q                               { close-window; }
