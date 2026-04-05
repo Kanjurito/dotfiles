@@ -1,4 +1,4 @@
-;; Powermenu Layout: Defines the structure and actions of the menu
+;; Powermenu Layout:
 (defwidget powermenu_layout []
   ;; Close the menu when clicking outside (overlay) or pressing Escape (key 9)
   (eventbox :onclick "eww -c ~/.config/eww/powermenu/ close powermenu"
@@ -18,8 +18,10 @@
         (button :class "btn-reboot" :onclick "systemctl reboot"   "󰜉")
         ;; Logout from current session
         (button :class "btn-logout" :onclick "loginctl terminate-user $USER" "󰍃")
-        ;; Quit Niri compositor specifically
-        (button :class "btn-niri"   :onclick "niri msg action quit" "󰈆")))))
+        ;; lock-session
+        (button :class "btn-lock"
+                :onclick "~/.config/eww/powermenu/lock.sh"
+                "󰌾")))))
 
 ;; Window definition: Fullscreen transparent overlay for the powermenu
 (defwindow powermenu

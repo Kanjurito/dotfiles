@@ -2,6 +2,7 @@
 $bg-color: #0a0a16;
 $cyan: #00f2ff;
 $magenta: #ff00ff;
+$yellow: #f1fa8c; /* Nouvelle couleur pour le verrou */
 $dark-blue: #1a1a2e;
 
 /* Transparent window to only show the centered menu */
@@ -39,18 +40,22 @@ button {
     color: #ff4b4b;
     text-shadow: 0 0 10px #ff4b4b;
 }
+
 .btn-reboot:hover {
     color: $cyan;
     text-shadow: 0 0 15px $cyan;
     background: linear-gradient(135deg, rgba(0, 242, 255, 0.1), transparent);
 }
+
 .btn-logout:hover {
     color: $magenta;
     text-shadow: 0 0 15px $magenta;
 }
-.btn-niri:hover {
-    color: $cyan;
-    text-shadow: 0 0 15px $cyan;
+
+/* Lock button */
+.btn-lock:hover {
+    color: $yellow;
+    text-shadow: 0 0 15px $yellow;
 }
 
 /* Generic hover state for subtle background change */

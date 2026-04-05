@@ -25,7 +25,6 @@ prefer-no-csd
 output "DP-2" {
     mode "1920x1080@144"
     position x=0 y=0
-    background-color "#1e1e2e"
 }
 // Dell screen
 output "DP-1" {
