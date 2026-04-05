@@ -15,27 +15,29 @@ This repository contains everything needed to reproduce my lightweight, fast, an
 | :---------------------------------------------------: | :-----------------------------------------------: |
 | <img src="screenshots/eww_powermenu.png" width="400"> | <img src="screenshots/dashboard.png" width="400"> |
 
-|                Music & QuickShell Widgets             |                 Wallpaper Picker                  |
-| :---------------------------------------------------: | :-----------------------------------------------: |
-| <img src="screenshots/widgets.png" width="400">       | <img src="screenshots/picker.png" width="400">    |
+|           Music & QuickShell Widgets            |                Wallpaper Picker                |
+| :---------------------------------------------: | :--------------------------------------------: |
+| <img src="screenshots/widgets.png" width="400"> | <img src="screenshots/picker.png" width="400"> |
 
-|                     Hyprlock                          |                    Unix P*rn                      |
-| :---------------------------------------------------: | :-----------------------------------------------: |
-| <img src="screenshots/hyprlock.png" width="400">      | <img src="screenshots/unixporn.png" width="400">  |
+|                     Hyprlock                     |                    Unix P\*rn                    |
+| :----------------------------------------------: | :----------------------------------------------: |
+| <img src="screenshots/hyprlock.png" width="400"> | <img src="screenshots/unixporn.png" width="400"> |
+
 ---
 
 ## 📂 Repository Structure
 
-| Component                            | Description                                                     |
-| ------------------------------------ | --------------------------------------------------------------- |
-| **niri/**                            | Main WM configuration + scripts                                 |
-| **niri/scripts/wallpaper_carrousel** | Automatic wallpaper rotation script                             |
-| **niri/scripts/wallpaper-picker**    | Wallpaper Selector Script                                       |
-| **fastfetch/**                       | Fastfetch configuration                                         |
-| **eww/**                             | Powermenu Widgets                                               |
-| **alacritty/**                       | Theme + keybinds                                                |
-| **swaylock/**                        | Lock screen config                                              |
-| **quickshell/**                      | Media player,User Menu,Bar,Control-Center and Waifu Widgets     |
+| Component                            | Description                                                 |
+| ------------------------------------ | ----------------------------------------------------------- |
+| **niri/**                            | Main WM configuration + scripts                             |
+| **niri/scripts/wallpaper_carrousel** | Automatic wallpaper rotation script                         |
+| **niri/scripts/wallpaper-picker**    | Wallpaper Selector Script                                   |
+| **fastfetch/**                       | Fastfetch configuration                                     |
+| **eww/**                             | Powermenu Widgets                                           |
+| **Kitty/**                           | Theme + keybinds                                            |
+| **swaylock/**                        | Lock screen config                                          |
+| **quickshell/**                      | Media player,User Menu,Bar,Control-Center and Waifu Widgets |
+
 ---
 
 ## ⚙️ Installation
@@ -85,6 +87,7 @@ Example:
 
 WALLPAPER_DIR="$HOME/Pictures/Wallpapers"
 ```
+
 ## Screen Configuration
 
 Edit your display variable :
@@ -126,10 +129,12 @@ output "DP-2" {
 } //for a 1080p screen at 60Hz
 ```
 
-Outputs are matched by connector name (i.e. eDP-1, HDMI-A-1), or by monitor manufacturer, model, and serial, separated by a single space each. You can find all of these by running 
+Outputs are matched by connector name (i.e. eDP-1, HDMI-A-1), or by monitor manufacturer, model, and serial, separated by a single space each. You can find all of these by running
+
 ```bash
 niri msg outputs
 ```
+
 Usually, the built-in monitor in laptops will be called eDP-1.
 
 ---
