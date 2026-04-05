@@ -1,6 +1,7 @@
 **/cache/
 **/Socket
 **/*.log
+install.sh.save
 
 google-chrome/
 discord/
