@@ -8,14 +8,13 @@ spawn-at-startup "swaync"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "bash" "-c" "sleep 1 && qs -p ~/dotfiles/quickshell/bar"
 spawn-at-startup "~/.config/niri/script/wallpaper_carousel.sh"
+spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/control-center"
+spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/desktop-clock"
 spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/media-player"
+spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/network-dashboard"
 spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/user-menu"
 spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/waifu-widget"
-spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/desktop-clock"
-spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/control-center"
-spawn-at-startup "bash" "-c" "sleep 2 && qs -p ~/.config/quickshell/network-dashboard"
 spawn-at-startup "bash" "-c" "sleep 5 && ~/.config/niri/script/start-visualizer.sh"
-
 spawn-at-startup "bash" "-c" "sleep 5 && gtk-launch com.discordapp.Discord"
 include "colors.kdl"
 // General Settings
@@ -87,7 +86,7 @@ binds {
     Mod+Shift+Y { spawn "eww" "-c" "/home/alterra/.config/eww/powermenu/" "open" "--toggle" "powermenu"; }
     MOD+SHIFT+ESCAPE { show-hotkey-overlay; }
     MOD+L { spawn "bash" "-c" "$HOME/dotfiles/swaylock/lock.sh"; }
-
+    XF86Explorer {spawn "nemo"; }
 
     MOD+A { spawn "rofi" "-show" "drun"; }
     MOD+B { spawn "firefox"; }
@@ -97,6 +96,7 @@ binds {
     MOD+Z { spawn "~/.config/niri/script/wallpaper-picker.sh"; }
     MOD+SHIFT+W { spawn "quickshell" "-p" "~/dotfiles/quickshell/waifu-widget";}
     CTRL+SHIFT+T { spawn "kitty"; }
+    XF86Calculator { spawn "galculator"; }
 
     // Media Keys
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%+"; }
@@ -105,11 +105,10 @@ binds {
     XF86MonBrightnessDown allow-when-locked=true { spawn "~/.config/niri/script/brightness.sh" "down"; }
     XF86AudioMute                       allow-when-locked=true { spawn-sh "playerctl volume_mute"; }
     XF86AudioMicMute                    allow-when-locked=true { spawn-sh "playerctl mic_mute"; }
-    XF86AudioNext                       allow-when-locked=true { spawn-sh "playerctl next_track"; }
     XF86AudioPause                      allow-when-locked=true { spawn-sh "playerctl play-pause"; }
     XF86AudioPlay                       allow-when-locked=true { spawn-sh "playerctl play-pause"; }
     XF86AudioPrev                       allow-when-locked=true { spawn-sh "playerctl previous"; }
-
+    XF86AudioNext 			allow-when-locked=true { spawn "playerctl" "next"; }
     // Window Management
     MOD+Q                               { close-window; }
     CTRL+ALT+Q				{ close-window; }
